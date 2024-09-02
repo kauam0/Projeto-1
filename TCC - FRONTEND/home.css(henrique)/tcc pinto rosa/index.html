@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrinho</title>
+    
+    <link rel="stylesheet" href="style/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+   <header>
+<a href="#" class="logo"><img src="/imgs/20240625_172008808 (1).png" alt="logo"></a>
+   <p>Carrinho de Compras</p>
+   <a href="#" class="perfil">Perfil</a>
+   </header>
+   
+   <main>
+      <div class="page-title">
+      seu carrinho
+      </div>
+      <div class="content">
+         <section>
+            <table>
+               <thead>
+                  <tr>
+                     <th>
+                        Produtos
+                     </th>
+                     <th>
+                        Preço
+                     </th>
+                     <th>
+                        Quantidade
+                     </th>
+                     <th>
+                        Total
+                     </th>
+                     <th>
+                        -
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                  <td>
+                     <div class="produtos">
+                        <img src="https://picsum.photos/200/200" alt="produto">
+                        <div class="info">
+                        <div class="nome">Nome do Produto</div>
+                        <div class="categoria">categoria</div>
+                     </div>
+                     </div>
+                  </td>
+                  <td>R$ 120</td>
+                  <td>
+                     <div class="quantidade">
+                        <button><i class='bx bx-minus'></i></button>
+                        <span>2</span>
+                        <button><i class='bx bx-plus'></i></button>
+                     </div>
+                  </td>
+                  <td>R$ 240</td>
+                  <td><button class="remove"><i class='bx bx-x'></i></button></td>
+               </tr>
+               </tbody>
+            </table>
+         </section>
+         <aside>
+            resumo das compras
+         </aside>
+      </div>
+   </main>
+</body>
+</html>

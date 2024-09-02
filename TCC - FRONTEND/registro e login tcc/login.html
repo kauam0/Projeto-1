@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-logo">
+                <!-- logo da pagina na area de login  -->
+                <img src="./20240625_172008808 (1).png" alt="logo">
+            </div>
+            <div class="login-header"> 
+                <!-- cabeça do login  -->
+                <h1>
+                    Login
+                </h1> 
+                <h3>
+                    Faça o Login para Acessar o Site Completo
+                </h3>
+            </div>
+            <form class="login-card-form" action="">
+                <!-- formulario login  -->
+            <div class="form-item">
+                <!-- itemlização do formulario com email, senha, "lembra-me" e 
+                esqueci a senha  -->
+                <span class="material-symbols-outlined">mail</span>
+                <input type="email" placeholder="insira seu email">
+            </div>
+            <div class="form-item">
+                <span class="material-symbols-outlined">lock</span>
+                <input type="password" placeholder="insira sua senha">
+            </div>
+            <div class="remember">
+                <input type="checkbox" id="rememberCheckbox">
+                <label for="rememberCheckbox">Lembra-me</label>
+            </div>
+            <a href="#">Esqueci minha senha</a>
+            
+       
+        <button type="submit">Login</button>
+    </form>
+    <!-- link do registro para pessoas sem conta -->
+    <div class="semConta">
+        Você não tem uma conta? 
+        <a href="#">Registre-se.</a>
+    </div>
+    <!-- formato de conexão com outras plataformas  -->
+    <div>Se conecte com outras plataformas:</div>
+    <div class="outrasPlataformas">
+       
+        <a href="#">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+        </a>
+        <a href="#">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></svg>
+        </a>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

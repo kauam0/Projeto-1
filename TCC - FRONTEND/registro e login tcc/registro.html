@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+m/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="container">
+    <div class="registro-container">
+        <div class="registro-card">
+            <div class="registro-logo">
+                <!-- logo da pagina na area de login  -->
+                <img src="./20240625_172008808 (1).png" alt="logo">
+            </div>
+            <div class="registro-header"> 
+                <!-- cabeça do login  -->
+                <h1>
+                    Registro
+                </h1> 
+                <h3>
+                    Faça o Registro para Acessar o Site Completo
+                </h3>
+            </div>
+           
+            <form class="registro-card-form" action="">
+                <!-- formulario login  -->
+                <!-- itemlização do formulario com email, senha, "lembra-me" e 
+                    esqueci a senha  -->
+                    <div class="form-item">
+                        <input type="name" placeholder="insira seu nome completo">
+                    </div>
+                    <div class="form-item">
+                        <input type="date" placeholder="insira sua data de nascimento">
+                    </div>
+                    <div class="form-item">
+                        <input type="number" placeholder="insira seu número de telefone">
+                    </div>
+                    <span id="message"></span>
+                    <div class="form-item">
+                         
+                        <input type="text" id="cep" placeholder="insira seu cep" class="input">
+                    </div>
+                    <div class="form-item">
+                        <input type="text" id="address" placeholder="insira seu endereço" class="input">
+                    </div>
+                <div class="form-item">
+                    <input type="text" id="bairro" placeholder="insira seu bairro" class="input">
+                </div>
+                <div class="form-item">
+                    <input type="text" id="cidade" placeholder="insira sua cidade" class="input">
+                </div>
+                <div class="form-item">
+                    <input type="" placeholder="numero e complemento">
+                </div>
+            <div class="form-item">
+                <span class="material-symbols-outlined">mail</span>
+                <input type="email" placeholder="insira seu email">
+            </div>
+            <div class="form-item">
+                <span class="material-symbols-outlined">lock</span>
+                <input type="password" placeholder="insira sua senha">
+            </div>
+       
+        <button type="submit">Login</button>
+    </form>
+    <!-- link do registro para pessoas sem conta -->
+    <div class="semConta">
+        Você já tem uma conta? 
+        <a href="#">Login.</a>
+    </div>
+    <!-- formato de conexão com outras plataformas  -->
+    <div>Se conecte com outras plataformas:</div>
+    <div class="outrasPlataformas">
+       
+        <a href="#">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-facebook"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" /></svg>
+        </a>
+        <a href="#">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.945 11a9 9 0 1 1 -3.284 -5.997l-2.655 2.392a5.5 5.5 0 1 0 2.119 6.605h-4.125v-3h7.945z" /></svg>
+        </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script src="registro.js"></script>
+</body>
+</html>
