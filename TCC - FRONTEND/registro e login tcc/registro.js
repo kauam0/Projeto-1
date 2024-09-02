@@ -1,5 +1,5 @@
 const cep = document.querySelector('#cep');
-const address = document.querySelector('#address'); 
+const address = document.querySelector('#address'); // Corrigido para #address
 const bairro = document.querySelector('#bairro');
 const cidade = document.querySelector('#cidade');
 const message = document.querySelector('#message');

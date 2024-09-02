@@ -1,6 +1,7 @@
 function process_geral(quant, indice){ 
     const todosProdutos = document.getElementsByClassName('produto_qnt_princ');
     
+    // Para filtrar você pode fazer assim:
     var i,len;
     var produtoFiltrado; 
 
