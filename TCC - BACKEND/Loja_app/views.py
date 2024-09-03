@@ -32,3 +32,6 @@ def localizacao(request):
         'localizacoes' : Localizacao.objects.all()
     }
     return render(request,'usuarios/usuarios.html', localizacao)
+
+class IndexView(TemplateView):
+    template_name = "index.html"
