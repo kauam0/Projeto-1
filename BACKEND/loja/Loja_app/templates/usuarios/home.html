@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet"  href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="home.html" class="logo">
+                <img src="{% static 'imgs/20240625_172008808(1).png' %}" alt="logo">
+            </a>
+            <a href="#" class="cep">CEP</a>
+            <a href="#" class="promocoes">Promoções</a>
+            <a href="#" class="categorias">Categorias</a>
+            <div class="searchContainer">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" class="pesquiseBar" placeholder="Pesquisar...">
+            </div>
+            <a href="#" class="login">Login</a>
+            <a href="#" class="perfil">Perfil</a>
+            <div class="carrinho">
+                <a href="index.html">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container1">
+        <!-- Produtos em Destaque -->
+        <div class="product-wrapper">
+            <button class="scroll-btn left" onclick="scrollContainer(-1, '.product-wrapper')">&#9664;</button>
+            <div class="containerproduct">
+                <h2>PRODUTOS EM DESTAQUE</h2>
+                <div class="productimg">
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/asics metarise foto.jpg' %} " alt="Asics Metarise">
+                        <div class="textop1">
+                            <a href="Asics metarise.html">Asics Metarise</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="" alt="Lebronha">
+                        <div class="textop1">
+                            <a href="lebronha.html">Lebronha</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/precision 6.avif' %}" alt="Precision VI">
+                        <div class="textop1">
+                            <a href="precision 6.avif">Precision VI</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="imgs/barata.webp" alt="Barata de brinquedo">
+                        <div class="textop1">
+                            <a href="barata.webp">Barata de brinquedo</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="imgs/0823740003-A.webp" alt="Saguadin">
+                        <div class="textop1">
+                            <a href="#">Saguadin</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollContainer(1, '.product-wrapper')">&#9654;</button>
+        </div>
+    </div>    
+
+    <!-- Produtos em Promoção -->
+    <div class="container2">
+        <div class="product-wrapper">
+            <button class="scroll-btn left" onclick="scrollContainer(-1, '.container2 .product-wrapper')">&#9664;</button>
+            <div class="containerproduct2">
+                <h2>PRODUTOS EM PROMOÇÃO</h2>
+                <div class="productimg">
+                    <div class="produtonovo">
+                        <img src="imgs/nike-lebron-11-what-the.jpg" alt="Lebron 11">
+                        <div class="textop1">
+                            <a href="nike-lebron-11-what-the.html">Lebron 11</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="imgs/fly by mid.webp" alt="Fly by Mid 3">
+                        <div class="textop1">
+                            <a href="fly-by-mid.html">Fly by Mid 3</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="imgs/Kobe 5 bruce.png" alt="Kobe 5 Proto Bruce Lee">
+                        <div class="textop1">
+                            <a href="Kobe bryan">Kobe Protro 5 Brucee Lee</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="imgs/a-crianca-de-2-anos.jpg">
+                        <div class="textop1">
+                            <a href="imgs/a-crianca-de-2-anos.jpg">Criança De 2 Anos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollContainer(1, '.container2 .product-wrapper')">&#9654;</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="{%static 'javaS/index.js' %}"> </script>
+</body>
+</html>

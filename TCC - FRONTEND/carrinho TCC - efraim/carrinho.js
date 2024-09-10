@@ -25,6 +25,5 @@ function process_geral(quant, indice){
         const quantidade = parseInt(produtoFiltrado.querySelector('input.quanti').value);
         const valorTotal = preco * quantidade;
         document.getElementById("resultado").innerHTML = ` R$ ${valorTotal}`;
-        document.getElementById("totall").innerHTML = ` R$ ${valorTotal}`;
         
 }    
