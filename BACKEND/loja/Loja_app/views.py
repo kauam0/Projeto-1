@@ -2,7 +2,10 @@ from django.shortcuts import render
 from .models import Usuario
 
 def login (request):
-    return render (request, 'usuarios/login.html')
+    return render (request, 'usuarios/regL/login.html')
+
+def registro (request):
+    return render (request, 'usuarios/regL/registro.html')
 
 def home(request):
     return render (request, 'home.html')
