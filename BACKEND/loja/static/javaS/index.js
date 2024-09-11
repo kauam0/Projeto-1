@@ -5,4 +5,6 @@ function scrollContainer(direction, containerSelector) {
         left: direction * scrollAmount,
         behavior: 'smooth'
     });
+
 }
+

@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from .models import Usuario
 
-def home():
-    pass
+def login (request):
+    return render (request, 'usuarios/login.html')
+
+def home(request):
+    return render (request, 'home.html')
+
 
 def cadastro(request):
     return render(request, 'usuarios/home.html')
