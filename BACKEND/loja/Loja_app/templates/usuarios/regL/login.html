@@ -26,6 +26,8 @@
                 </h3>
             </div>
             <form class="login-card-form" action="">
+                {% csrf_token %}
+                    {{ form.as_p }}
                 <!-- formulario login  -->
             <div class="form-item">
                 <!-- itemlização do formulario com email, senha, "lembra-me" e 

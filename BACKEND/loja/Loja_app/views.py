@@ -1,18 +1,32 @@
 from django.shortcuts import render
 from .models import Usuario
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.forms import AuthenticationForm
 
-def login (request):
+
+def loginn (request):
     return render (request, 'usuarios/regL/login.html')
 
 def registro (request):
     return render (request, 'usuarios/regL/registro.html')
 
-def home(request):
-    return render (request, 'home.html')
-
-
 def cadastro(request):
     return render(request, 'usuarios/home.html')
+
+
+def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(request , data=request.POST)
+        if form.is_valid():
+            user =  form.get_user()
+            login (request, user)
+            return redirect('home')
+
+    else:
+        form = AuthenticationForm()
+    return render (request, 'usuarios/regL/login.html', {'form': form})
+
+
 
 def usuarios(request):
     #salvar
@@ -33,7 +47,7 @@ def usuarios(request):
         'usuarios' : Usuario.objects.all()
     }
     
-    return render(request,'usuarios/usuarios.html',usuarios)
+    return render(request,'usuarios/home.html',usuarios)
     
     
 

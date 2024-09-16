@@ -29,35 +29,39 @@
                 </h3>
             </div>
            
-            <form class="registro-card-form" action="">
+            <form class="registro-card-form" action="{%url 'listagem_usuarios'%}" method="post">
+                {% csrf_token %}
                 <!-- formulario login  -->
                 <!-- itemlização do formulario com email, senha, "lembra-me" e 
                     esqueci a senha  -->
                     <div class="form-item">
-                        <input type="name" placeholder="insira seu nome completo">
+                        <input type="name" name="nome" placeholder="insira seu nome completo">
                     </div>
                     <div class="form-item">
-                        <input type="date" placeholder="insira sua data de nascimento">
+                        <input type="date" name="nascimento" placeholder="insira sua data de nascimento">
                     </div>
                     <div class="form-item">
-                        <input type="number" placeholder="insira seu número de telefone">
+                        <input type="number" name="telefone" placeholder="insira seu número de telefone">
                     </div>
                     <span id="message"></span>
                     <div class="form-item">
                          
-                        <input type="text" id="cep" placeholder="insira seu cep" class="input">
+                        <input type="text" id="cep" name="cep" placeholder="insira seu cep" class="input">
                     </div>
                     <div class="form-item">
-                        <input type="text" id="address" placeholder="insira seu endereço" class="input">
+                        <input type="text" id="address" name= placeholder="insira seu endereço" class="input">
                     </div>
                 <div class="form-item">
-                    <input type="text" id="bairro" placeholder="insira seu bairro" class="input">
+                    <input type="text" id="bairro" name="bairro" placeholder="insira seu bairro" class="input">
                 </div>
                 <div class="form-item">
-                    <input type="text" id="cidade" placeholder="insira sua cidade" class="input">
+                    <input type="text" id="cidade" name="cidade" placeholder="insira sua cidade" class="input">
                 </div>
                 <div class="form-item">
-                    <input type="" placeholder="numero e complemento">
+                    <input type="text" name="complemento" placeholder="complemento">
+                </div>
+                <div class="form-item">
+                    <input type="number" name="numero_casa" placeholder="numero ">
                 </div>
             <div class="form-item">
                 <span class="material-symbols-outlined">mail</span>
