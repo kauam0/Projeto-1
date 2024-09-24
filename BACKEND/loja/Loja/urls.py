@@ -1,13 +1,11 @@
-from django.urls import path
+from django.urls import path, include
 from Loja_app import views
 
 urlpatterns = [
-    path('', views.cadastro, name='home'),
+    path('', views.home, name='home'),
     # rota para as informaçoes do usuario
     path('informacao/', views.usuarios, name='listagem_usuarios'),
     
-    path('login/', views.loginn, name='login'),
-    
-    path('registro/', views.registro, name='registro')
+    path('auth/', include("Loja_app.urls"))
  
 ]
