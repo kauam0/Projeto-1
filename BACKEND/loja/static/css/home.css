@@ -84,14 +84,38 @@ header nav a {
 .carrinho span {
     font-size: 30px;
 }
-
-.container1, .container2 {
+.maincontainer{
+    display: flex;
+}
+.containerdeproduto{
+    width: 950px;
+    height: 1000px;
+}
+.container1 {
     position: relative ;
-    width: 49.9%;
+    width: 100%;
     padding: 20px;
     overflow: hidden; /* Oculta o excesso fora do contêiner */
+    flex-direction: row;
 }
-
+.container2 {
+    position: relative ;
+    width: 100%;
+    padding: 20px;
+    flex-direction: column;
+    overflow: hidden; /* Oculta o excesso fora do contêiner */
+}
+.divtexto{
+    flex-direction: row;
+    width: 20%;
+    border: black solid 2px;
+   align-items: center;
+   margin: 59px;
+}
+.divtexto p{
+    flex-direction: column;
+    display: flex;
+}
 .product-wrapper {
     display: flex;
     overflow-x: auto; /* Habilita rolagem horizontal */
@@ -105,7 +129,7 @@ header nav a {
 }
 .containerproduct {
     display: flex;
-    flex-direction: column; /* Garante que os itens sejam dispostos horizontalmente */
+    flex-direction: column;
     align-items: flex-start;
     gap: 20px; /* Espaçamento entre os itens */
 }
