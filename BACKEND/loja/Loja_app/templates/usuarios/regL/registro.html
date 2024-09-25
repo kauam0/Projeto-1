@@ -29,9 +29,49 @@
                 </h3>
             </div>
            
-            <form method='POST'> 
+            <form class="registro-card-form" action="{%url 'listagem_usuarios'%}" method="post">
                 {% csrf_token %}
-                {{ form }}
+                <!-- formulario login  -->
+                <!-- itemlização do formulario com email, senha, "lembra-me" e 
+                    esqueci a senha  -->
+                    <div class="form-item">
+                        <input type="name" name="nome" placeholder="insira seu nome completo">
+                    </div>
+                    <div class="form-item">
+                        <input type="date" name="nascimento" placeholder="insira sua data de nascimento">
+                    </div>
+                    <div class="form-item">
+                        <input type="number" name="telefone" placeholder="insira seu número de telefone">
+                    </div>
+                    <span id="message"></span>
+                    <div class="form-item">
+                         
+                        <input type="text" id="cep" name="cep" placeholder="insira seu cep" class="input">
+                    </div>
+                    <div class="form-item">
+                        <input type="text" id="address" name="rua" placeholder="insira seu endereço" class="input">
+                    </div>
+                <div class="form-item">
+                    <input type="text" id="bairro" name="bairro" placeholder="insira seu bairro" class="input">
+                </div>
+                <div class="form-item">
+                    <input type="text" id="cidade" name="cidade" placeholder="insira sua cidade" class="input">
+                </div>
+                <div class="form-item">
+                    <input type="text" name="complemento" placeholder="complemento">
+                </div>
+                <div class="form-item">
+                    <input type="number" name="numero_casa" placeholder="numero ">
+                </div>
+            <div class="form-item">
+                <span class="material-symbols-outlined">mail</span>
+                <input type="email" name="email" placeholder="insira seu email">
+            </div>
+            <div class="form-item">
+                <span class="material-symbols-outlined">lock</span>
+                <input type="password" name="senha" placeholder="insira sua senha">
+            </div>
+       
         <button type="submit">Login</button>
     </form>
     <!-- link do registro para pessoas sem conta -->
