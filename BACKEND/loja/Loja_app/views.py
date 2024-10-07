@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from .models import Usuario
+from django.contrib.auth.models = User, Permission
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.forms import AuthenticationForm
+
 
 
 def loginn (request):
@@ -10,7 +11,7 @@ def loginn (request):
 def registro (request):
     return render (request, 'usuarios/regL/registro.html')
 
-def cadastro(request):
+def home(request):
     return render(request, 'usuarios/home.html')
  
  
