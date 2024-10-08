@@ -49,8 +49,7 @@ def usuarios(request):
     
     return render(request,'usuarios/home.html',usuarios)
     
-    
-
+   
      
    
 
