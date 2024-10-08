@@ -2,14 +2,26 @@ from django.shortcuts import render
 from .models import Usuario
 from django.contrib.auth.models import User, Permission
 from django.contrib.auth import authenticate, login
-
+from django.http import HttpResponse
 
 
 def loginn (request):
     return render (request, 'usuarios/regL/login.html')
 
 def registro (request):
-    return render (request, 'usuarios/regL/registro.html')
+    if request.method == "GET":
+        return render (request, 'usuarios/regL/registro.html')
+    else:
+        nome = request.POST.get("nome")
+        email = request.POST.get("email")
+        senha = request.POST.get("senha")
+        
+        user = User.objects.filter(email=email).first()
+        if user:
+            return HttpResponse('esse email ja existe')
+        user = User.objects.create_user(username=nome, email=email, password=senha)
+        user.save()
+        return HttpResponse('usuario cadastrado com sucesso')
 
 def home(request):
     return render(request, 'usuarios/home.html')
