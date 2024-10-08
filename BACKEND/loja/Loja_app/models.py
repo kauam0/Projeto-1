@@ -18,3 +18,11 @@ class Usuario(models.Model):
     def save(self, *args, **kwargs):
         self.senha = make_password(self.senha)
         super().save(*args, **kwargs)
+
+class Produtos(models.Model):
+    id_produtos = models.AutoField(primary_key=True)
+    nome_do_produto = models.CharField(max_length=100)
+    categoria = models.CharField(max_length=120)
+    condicao = models.CharField(max_length=50)
+    valor = models.FloatField()
+
