@@ -26,11 +26,11 @@ def registro (request):
         user = User.objects.create_user(username=nome, email=email, password=senha)
         user.save()
         return HttpResponse('usuario cadastrado com sucesso')
-    
-def carrinho (request):
-    return  render (request, 'usuarios/carrinho/index.html')
 
-
+def home(request):
+    return render(request, 'usuarios/home.html')
+ 
+ 
 
 def usuarios(request):
     #salvar
