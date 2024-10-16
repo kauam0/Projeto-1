@@ -1,0 +1,97 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carrinho</title>
+    
+    <link rel="stylesheet"  href="{% static 'css/carrinho/style.css' %}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+   <header>
+<a href="#" class="logo"><img src="/imgs/20240625_172008808 (1).png" alt="logo"></a>
+   <p>Carrinho de Compras</p>
+   <a href="#" class="perfil">Perfil</a>
+   </header>
+   
+   <main>
+      <div class="page-title">
+      seu carrinho
+      </div>
+      <div class="content">
+         <section>
+            <table>
+               <thead>
+                  <tr>
+                     <th>
+                        Produtos
+                     </th>
+                     <th>
+                        Preço
+                     </th>
+                     <th>
+                        Quantidade
+                     </th>
+                     <th>
+                        Total
+                     </th>
+                     <th>
+                        -
+                     </th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                  <td>
+                     <div class="produtos">
+                        <img src="https://picsum.photos/200/200" alt="produto">
+                        <div class="info">
+                        <div class="nome">Nome do Produto</div>
+                        <div class="categoria">categoria</div>
+                     </div>
+                     </div>
+                  </td>
+                  <td>
+                     
+                     <input id="precoo" type="number" class="preco" value="120"  readonly>
+
+                  </td>
+                  <td>
+                     <div data-product="{{ product.id }}">
+                        <div class="produto_qnt_princ" data-product="{{ product.id }}" data-app="product.quantity">      
+                          <input class="qnt_menor_maior" type="button" id="plus" value='-' onclick="process_geral(-1,'{{ product.id }}')" />
+                          <input class="quanti qnt_menor_maior" name="quanti" class="text" size="1" type="text" value="1" maxlength="5" />
+                          <input class="qnt_menor_maior" type="button" id="minus" value='+' onclick="process_geral(1,'{{ product.id }}')" />
+                           
+                        </div>    
+                    </div>     
+                  </td>
+                  <td>
+                     <p id="resultado"> </p>
+                  </td>
+                  <td><button class="remove"><i class='bx bx-x'></i></button></td>
+               </tr>
+               </tbody>
+            </table>
+         </section>
+         <aside>
+             <div class="box">
+               <header>Resumo da Compra</header>
+               <div class="info">
+                  <div>
+                     <span>Sub-total</span><span>R$ 418</span></div>
+                     <div><span>Frete</span><span>Gratuito</span></div>
+                     <div><button>Adicionar Cupom de Desconto</button></div>
+               </div>
+               <footer>Total R$100</footer>
+             </div>
+             <button>Finalizar Compra</button>
+         </aside>
+      </div>
+   </main>
+   <script src="{% static 'javaS/carrinho.js' %}"></script>
+</body>
+</html>

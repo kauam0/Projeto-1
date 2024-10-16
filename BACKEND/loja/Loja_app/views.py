@@ -5,6 +5,10 @@ from django.contrib.auth import authenticate, login
 from django.http import HttpResponse
 
 
+def home(request):
+    return render(request, 'usuarios/home.html')
+ 
+
 def loginn (request):
     return render (request, 'usuarios/regL/login.html')
 
@@ -22,11 +26,11 @@ def registro (request):
         user = User.objects.create_user(username=nome, email=email, password=senha)
         user.save()
         return HttpResponse('usuario cadastrado com sucesso')
+    
+def carrinho (request):
+    return  render (request, 'usuarios/carrinho/index.html')
 
-def home(request):
-    return render(request, 'usuarios/home.html')
- 
- 
+
 
 def usuarios(request):
     #salvar
@@ -42,7 +46,7 @@ def usuarios(request):
     novo_usuario.rua = request.POST.get('rua')
     novo_usuario.complemento = request.POST.get('complemento')
     novo_usuario.save()
-   
+
     usuarios = {
         'usuarios' : Usuario.objects.all()
     }
