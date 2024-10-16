@@ -1,24 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Usuario
 from django.contrib.auth.models import User, Permission
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as login_django
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
+from .forms import EmailAuthenticationForm
 
 
 def loginn (request):
     if request.method == 'GET':
-        return render (request, 'usuarios/regL/login.html')
+        form = EmailAuthenticationForm()
+        return render(request, 'usuarios/regL/login.html', {'form': form})
     else:
-        email = request.POST.get("email")
-        senha = request.POST.get("senha")
-
-        user =  authenticate( email=email, password=senha)
-        
-        if user:#verificando se o usuario é valido
-            login(request, user)
-            return HttpResponse('Login realizado com sucesso')
+        form = EmailAuthenticationForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['senha']
+            user = authenticate(email=email, password=password)
+            if user:
+                login_django(request, user)
+                return redirect('home')
+            
+            else:
+                return render(request, 'usuarios/regL/login.html', {'form': form, 'error': 'E-mail ou senha incorretos'})
         else:
-           return HttpResponse("email ou senha invalidas")
+            return HttpResponse('error AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')  # Retorna o formulário com erros
+       
 
 
 def registro (request):
@@ -29,7 +37,9 @@ def registro (request):
         email = request.POST.get("email")
         senha = request.POST.get("senha")
         
+        
         user = User.objects.filter(email=email).first()
+        user.set_password(senha)
         if user:
             return HttpResponse('esse email ja existe')
         user = User.objects.create_user(username=nome, email=email, password=senha)
@@ -62,4 +72,5 @@ def usuarios(request):
     #salvar localiçao
     
 
+  
   
