@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Usuario
 from django.contrib.auth.models import User, Permission
 from django.contrib.auth import authenticate, login
@@ -8,9 +8,8 @@ from django.http import HttpResponse
 def home(request):
     return render(request, 'usuarios/home.html')
  
-
-def loginn (request):
-    return render (request, 'usuarios/regL/login.html')
+def loginn(request):
+    return render(request, 'usuarios/regL/login.html')
 
 def registro (request):
     if request.method == "GET":
