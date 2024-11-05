@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Usuario
-from django.contrib.auth.models = User, Permission
+from django.contrib.auth.models import User, Permission
 from django.contrib.auth import authenticate, login
 
 

@@ -6,10 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet"  href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
-    <title> HOME </title>
- </head>
+</head>
 <body>
     <header class="header">
         <nav class="navbar">
@@ -34,95 +33,204 @@
     </header>
     <div class="divtexto">
         <div class="textodoacao">
-        <h2> 
-            Somos uma empresa feita da comunidade para comunidade.
-            Doe para ajudar as familias que necessitam.
+            <h2> 
+                Somos uma empresa feita da comunidade para comunidade.
+                Doe para ajudar as familias que necessitam.
             </h2>
+        </div>
     </div>
+    
+    <div class="container-flex">
+        <div class="maincontainer">
+            <div class="containerdeproduto">
+                <div class="container1">
+                    <!-- Produtos em Destaque -->
+                    <div class="product-wrapper">
+                        <button class="scroll-btn left" onclick="scrollContainer(-1, '.product-wrapper')">&#9664;</button>
+                        <div class="containerproduct">
+                            <h2>PRODUTOS EM DESTAQUE</h2>
+                            <div class="productimg">
+                                <div class="produtonovo">
+                                    <img src="{% static 'imgs/asics metarise foto.jpg' %}" alt="Asics Metarise">
+                                    <div class="textop1">
+                                        <a href="Asics metarise.html">Asics Metarise</a>
+                                    </div>
+                                </div>
+                                <div class="produtonovo"> 
+                                    <img src="{% static 'imgs/lebronha.webp' %}" alt="Lebronha">
+                                    <div class="textop1">
+                                        <a href="lebronha.html">Lebron away</a>
+                                    </div>
+                                </div>
+                                <div class="produtonovo">
+                                    <img src="{% static 'imgs/precision 6.avif' %}" alt="Precision VI">
+                                    <div class="textop1">
+                                        <a href="precision 6.avif">Precision VI</a>
+                                    </div>
+                                </div>
+                                <div class="produtonovo">
+                                    <img src="{% static 'imgs/barata.webp' %}" alt="Barata de brinquedo">
+                                    <div class="textop1">
+                                        <a href="barata.webp">Barata de brinquedo</a>
+                                    </div>
+                                </div>
+                                <div class="produtonovo">
+                                    <img src="{% static 'imgs/0823740003-A.webp' %}" alt="Saguadin">
+                                    <div class="textop1">
+                                        <a href="#">Giannis Imortality 3</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="scroll-btn right" onclick="scrollContainer(1, '.product-wrapper')">&#9654;</button>
+                    </div>
+                </div>    
+                <!-- Produtos em Promoção -->
+                <div class="container2">
+                    <div class="product-wrapper">
+                        <button class="scroll-btn left" onclick="scrollContainer(-1, '.container2 .product-wrapper')">&#9664;</button>
+                        <div class="containerproduct2">
+                            <h2>PRODUTOS EM PROMOÇÃO</h2>
+                            <div class="productimg">
+                                <div class="produtonovo">
+                                    <img src="{% static 'imgs/nike-lebron-11-what-the.jpg' %}" alt="Lebron 11">
+                                    <div class="textop1">
+                                        <a href="nike-lebron-11-what-the.html">Lebron 11</a>
+                                    </div>
+                                </div>
+                                <div class="produtonovo">
+                                    <img src="{% static 'imgs/fly by mid.webp' %}" alt="Fly by Mid 3">
+                                    <div class="textop1">
+                                        <a href="fly-by-mid.html">Fly by Mid 3</a>
+                                    </div>
+                                </div>
+                                <div class="produtonovo">
+                                    <img src="{% static 'imgs/Kobe 5 bruce.png' %}" alt="Kobe 5 Proto Bruce Lee">
+                                    <div class="textop1">
+                                        <a href="Kobe bryan">Kobe Protro 5 Brucee Lee</a>
+                                    </div>
+                                </div>
+                                <div class="produtonovo">
+                                    <img src="{% static 'C:\Users\Henrique\Documents\Tcc\Projeto-1\BACKEND\loja\static\imgs\tipos-de-carro-hatch-new-city-hatchback.jpg' %}">
+                                    <div class="textop1">
+                                        <a href="C:\Users\Henrique\Documents\Tcc\Projeto-1\BACKEND\loja\static\imgs\tipos-de-carro-hatch-new-city-hatchback.jpg">Carro</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="scroll-btn right" onclick="scrollContainer(1, '.container2 .product-wrapper')">&#9654;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Div slidestop ao lado do maincontainer -->
+        <div class="slidestop">
+            <img src="{% static 'C:\Users\Henrique\Documents\Tcc\Projeto-1\BACKEND\loja\static\imgs\ciencia-da-computacao-2.jpg' %}" alt="Imagem">
+        </div>
     </div>
-<div class="maincontainer">
-    <div class="containerdeproduto">
-    <div class="container1">
-        <!-- Produtos em Destaque -->
+
+    <!-- Novas linhas de produtos -->
+    <div class="container-gerais">
         <div class="product-wrapper">
-            <button class="scroll-btn left" onclick="scrollContainer(-1, '.product-wrapper')">&#9664;</button>
+            
             <div class="containerproduct">
-                <h2>PRODUTOS EM DESTAQUE</h2>
+                <h2>PRODUTOS</h2>
                 <div class="productimg">
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/asics metarise foto.jpg' %} " alt="Asics Metarise">
+                        <img src="{% static 'imgs/exemplo1.jpg' %}" alt="Produto 1">
                         <div class="textop1">
-                            <a href="Asics metarise.html">Asics Metarise</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo"> 
-                        <img src="{%static 'C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\lebronha.webp' %}" alt="Lebronha">
-                        <div class="textop1">
-                            <a href="lebronha.html">Lebronha</a>
+                            <a href="#">Produto 1</a>
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/precision 6.avif' %}" alt="Precision VI">
+                        <img src="{% static 'imgs/exemplo2.jpg' %}" alt="Produto 2">
                         <div class="textop1">
-                            <a href="precision 6.avif">Precision VI</a>
+                            <a href="#">Produto 2</a>
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{%static 'imgs/barata.webp' %}" alt="Barata de brinquedo">
+                        <img src="{% static 'imgs/exemplo3.jpg' %}" alt="Produto 3">
                         <div class="textop1">
-                            <a href="barata.webp">Barata de brinquedo</a>
+                            <a href="#">Produto 3</a>
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{%static 'imgs/0823740003-A.webp' %}" alt="Saguadin">
+                        <img src="{% static 'imgs/exemplo4.jpg' %}" alt="Produto 4">
                         <div class="textop1">
-                            <a href="#">Giannis Imortality 3</a>
+                            <a href="#">Produto 4</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                        <div class="textop1">
+                            <a href="#">Produto 5</a>
+                        </div>
+                </div>
+                <div class="produtonovo">
+                    <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                    <div class="textop1">
+                        <a href="#">Produto 6</a>
+                    </div>
+            </div>
+            
+        </div>
+
+        <div class="product-wrapper">
+            
+            <div class="containerproduct2">
+                <h2>PRODUTOS</h2>
+                <div class="productimg">
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/exemplo5.jpg' %}" alt="Produto 5">
+                        <div class="textop1">
+                            <a href="#">Produto 7</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/exemplo6.jpg' %}" alt="Produto 6">
+                        <div class="textop1">
+                            <a href="#">Produto 8</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/exemplo7.jpg' %}" alt="Produto 7">
+                        <div class="textop1">
+                            <a href="#">Produto 9</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                        <div class="textop1">
+                            <a href="#">Produto 10</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                        <div class="textop1">
+                            <a href="#">Produto 11</a>
+                        </div>
+                    </div>
+                    <div class="produtonovo">
+                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                        <div class="textop1">
+                            <a href="#">Produto 12</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <button class="scroll-btn right" onclick="scrollContainer(1, '.product-wrapper')">&#9654;</button>
+           
         </div>
+    </div>
+</div>
+    <div class="navfooter">
+    text
     </div>    
-    <!---Texto sobre o site-->
 
-    <!-- Produtos em Promoção -->
-    <div class="container2">
-        <div class="product-wrapper">
-            <button class="scroll-btn left" onclick="scrollContainer(-1, '.container2 .product-wrapper')">&#9664;</button>
-            <div class="containerproduct2">
-                <h2>PRODUTOS EM PROMOÇÃO</h2>
-                <div class="productimg">
-                    <div class="produtonovo">
-                        <img src="{%static 'imgs/nike-lebron-11-what-the.jpg' %}" alt="Lebron 11">
-                        <div class="textop1">
-                            <a href="nike-lebron-11-what-the.html">Lebron 11</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{%static 'imgs/fly by mid.webp' %}" alt="Fly by Mid 3">
-                        <div class="textop1">
-                            <a href="fly-by-mid.html">Fly by Mid 3</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{%static 'imgs/Kobe 5 bruce.png' %}" alt="Kobe 5 Proto Bruce Lee">
-                        <div class="textop1">
-                            <a href="Kobe bryan">Kobe Protro 5 Brucee Lee</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{%static 'imgs/a-crianca-de-2-anos.jpg' %}">
-                        <div class="textop1">
-                            <a href="imgs/a-crianca-de-2-anos.jpg">Criança De 2 Anos, negra virgem</a>
-                        </div>
-                    </div>
-                </div>
 
-            <button class="scroll-btn right" onclick="scrollContainer(1, '.container2 .product-wrapper')">&#9654;</button>
-    <script type="text/javascript" src="{%static 'javaS/index.js' %}"> </script>
+    <script type="text/javascript" src="{% static 'javaS/index.js' %}"></script>
     <script>
-        document.querySelector('.divtexto').style.backgroundImage = "url('{% static 'imgs\home_natal_2024_banner_desktop_a-fome-machuca.jpg' %}')";
+        document.querySelector('.divtexto').style.backgroundImage = "url('{% static 'imgs/home_natal_2024_banner_desktop_a-fome-machuca.jpg' %}')";
     </script>
 </body>
 </html>
