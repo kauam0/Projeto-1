@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -25,22 +26,21 @@
                     Faça o Login para Acessar o Site Completo
                 </h3>
             </div>
-            <form class="login-card-form" method="post">
+            <form class="login-card-form" action="{% url 'loginn' %}" method="POST">
                 {% csrf_token %}
-                
-                
+                    {{ form.as_p }}
                 <!-- formulario login  -->
-                <div class="form-item">
-                    <span class="material-symbols-outlined">email</span>
-                    {{ form.email.label_tag }}
-                    {{ form.email }}
-                </div>
-            
-                <div class="form-item">
-                    <span class="material-symbols-outlined">lock</span>
-                    {{ form.password.label_tag }}
-                    {{ form.password }}
-                </div>
+            <div class="form-item">
+                <!-- itemlização do formulario com email, senha, "lembra-me" e 
+                esqueci a senha  -->
+                <span class="material-symbols-outlined">mail</span>
+                <input type="text" placeholder="insira seu nome"  name="nome">
+
+            </div>
+            <div class="form-item">
+                <span class="material-symbols-outlined">lock</span>
+                <input type="password" placeholder="insira sua senha" name="senha">
+            </div>
             <div class="remember">
                 <input type="checkbox" id="rememberCheckbox">
                 <label for="rememberCheckbox">Lembra-me</label>

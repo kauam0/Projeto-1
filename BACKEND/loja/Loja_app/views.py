@@ -3,30 +3,29 @@ from .models import Usuario
 from django.contrib.auth.models import User, Permission
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
-from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
-from .forms import EmailAuthenticationForm
 
 
 def loginn (request):
     if request.method == 'GET':
-        form = EmailAuthenticationForm()
-        return render(request, 'usuarios/regL/login.html', {'form': form})
-    else:
-        form = EmailAuthenticationForm(request.POST)
-        if form.is_valid():
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['senha']
-            user = authenticate(email=email, password=password)
-            if user:
-                login_django(request, user)
-                return redirect('home')
-            
-            else:
-                return render(request, 'usuarios/regL/login.html', {'form': form, 'error': 'E-mail ou senha incorretos'})
+            return render (request, 'usuarios/regL/login.html')
+    else: 
+        username = request.POST.get('nome')
+        senha = request.POST.get('senha') 
+
+        user = authenticate (username=username, password=senha )
+
+        if user: 
+            login_django(request, user)
+
+            return render(request, 'usuarios/home.html')
         else:
-            return HttpResponse('error AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA')  # Retorna o formulário com erros
-       
+            return HttpResponse('nao autenticado')
+
+
+
+    
+
 
 
 def registro (request):
@@ -39,7 +38,6 @@ def registro (request):
         
         
         user = User.objects.filter(email=email).first()
-        user.set_password(senha)
         if user:
             return HttpResponse('esse email ja existe')
         user = User.objects.create_user(username=nome, email=email, password=senha)
