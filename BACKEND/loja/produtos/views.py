@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .form import dadosProduto, imagemProduto
-from .models import Produtos, ImagemProdutos
+
 
 def  criar_produto(request):
     if request.method == 'Post':
