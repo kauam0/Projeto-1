@@ -51,6 +51,11 @@ def registro (request):
 def home(request):
     return render(request, 'usuarios/home.html')
  
+
+def carrinho(request):
+    return render(request, 'usuarios/carrinho/index.html')
+
+
  
 def usuarios(request):
     #salvar
@@ -66,7 +71,7 @@ def usuarios(request):
     novo_usuario.rua = request.POST.get('rua')
     novo_usuario.complemento = request.POST.get('complemento')
     novo_usuario.save()
-<<<<<<< HEAD
+
 
     usuarios = {
         'usuarios' : Usuario.objects.all()
@@ -74,9 +79,6 @@ def usuarios(request):
     
     return render(request,'usuarios/home.html',usuarios)
     
-    
-=======
->>>>>>> backend
 
    
      
