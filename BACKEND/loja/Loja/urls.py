@@ -9,5 +9,7 @@ urlpatterns = [
     path('informacao/', views.usuarios, name='listagem_usuarios'),
     
     path('auth/', include("Loja_app.urls"))
+
+    
  
 ]

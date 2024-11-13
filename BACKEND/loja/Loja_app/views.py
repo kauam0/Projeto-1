@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Usuario
 from django.contrib.auth.models import User, Permission
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate
+from django.contrib.auth import login as login_django
 from django.http import HttpResponse
 
 
@@ -10,7 +11,26 @@ def home(request):
  
 
 def loginn (request):
-    return render (request, 'usuarios/regL/login.html')
+    if request.method == 'GET':
+            return render (request, 'usuarios/regL/login.html')
+    else: 
+        username = request.POST.get('nome')
+        senha = request.POST.get('senha') 
+
+        user = authenticate (username=username, password=senha )
+
+        if user: 
+            login_django(request, user)
+
+            return render(request, 'usuarios/home.html')
+        else:
+            return HttpResponse('nao autenticado')
+
+
+
+    
+
+
 
 def registro (request):
     if request.method == "GET":
@@ -19,6 +39,7 @@ def registro (request):
         nome = request.POST.get("nome")
         email = request.POST.get("email")
         senha = request.POST.get("senha")
+        
         
         user = User.objects.filter(email=email).first()
         if user:
@@ -31,7 +52,6 @@ def home(request):
     return render(request, 'usuarios/home.html')
  
  
-
 def usuarios(request):
     #salvar
     novo_usuario = Usuario()
@@ -46,6 +66,7 @@ def usuarios(request):
     novo_usuario.rua = request.POST.get('rua')
     novo_usuario.complemento = request.POST.get('complemento')
     novo_usuario.save()
+<<<<<<< HEAD
 
     usuarios = {
         'usuarios' : Usuario.objects.all()
@@ -54,11 +75,15 @@ def usuarios(request):
     return render(request,'usuarios/home.html',usuarios)
     
     
+=======
+>>>>>>> backend
 
+   
      
    
 
     #salvar localiçao
     
 
+  
   

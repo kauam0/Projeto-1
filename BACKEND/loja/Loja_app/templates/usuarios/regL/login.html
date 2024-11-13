@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -25,7 +26,7 @@
                     Faça o Login para Acessar o Site Completo
                 </h3>
             </div>
-            <form class="login-card-form" action="">
+            <form class="login-card-form" action="{% url 'loginn' %}" method="POST">
                 {% csrf_token %}
                     {{ form.as_p }}
                 <!-- formulario login  -->
@@ -33,11 +34,12 @@
                 <!-- itemlização do formulario com email, senha, "lembra-me" e 
                 esqueci a senha  -->
                 <span class="material-symbols-outlined">mail</span>
-                <input type="email" placeholder="insira seu email">
+                <input type="text" placeholder="insira seu nome"  name="nome">
+
             </div>
             <div class="form-item">
                 <span class="material-symbols-outlined">lock</span>
-                <input type="password" placeholder="insira sua senha">
+                <input type="password" placeholder="insira sua senha" name="senha">
             </div>
             <div class="remember">
                 <input type="checkbox" id="rememberCheckbox">
@@ -51,7 +53,7 @@
     <!-- link do registro para pessoas sem conta -->
     <div class="semConta">
         Você não tem uma conta? 
-        <a href="{% url "registro" %}">Registre-se.</a>
+        <a href="{% url 'listagem_usuarios' %}">Registre-se.</a>
     </div>
     <!-- formato de conexão com outras plataformas  -->
     <div>Se conecte com outras plataformas:</div>
