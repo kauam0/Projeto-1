@@ -55,7 +55,8 @@ def home(request):
 def carrinho(request):
     return render(request, 'usuarios/carrinho/index.html')
 
-
+def tela_de_usuario(request):
+    return render(request, 'usuarios/tela/index.html')
  
 def usuarios(request):
     #salvar
@@ -80,7 +81,7 @@ def usuarios(request):
     return render(request,'usuarios/home.html',usuarios)
     
 
-   
+
      
    
 
