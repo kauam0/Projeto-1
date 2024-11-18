@@ -9,7 +9,7 @@
 
 body {
     font-family: "Ubuntu", sans-serif;
-    background-color: aliceblue;
+    background-color: #05EDF0;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -126,7 +126,7 @@ header nav a {
     background-position: center; /* Centraliza a imagem */
     background-size: cover; /* Cobre todo o espaço disponível */
     color: #ffff00;
-    height: 380px;
+    height: 500px;
     align-items: center;
 
 }
@@ -233,10 +233,29 @@ header nav a {
 }
 .navfooter{
     width: 100%;
-    position: relative;
+    display: flex;
     background-color: grey;
     margin-bottom: 0;
-    padding-bottom: 0;
+    
     border-top: black solid 3px;
     margin-top: 50px;
+}
+.navfooter a{
+    display:flex;
+    flex-direction: row;
+    margin-left: 40px;
+}
+
+.navfooter li{
+    align-items: center;
+    display: flex;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.navfooter li a{
+    align-items: center;
+    display: flex;
+    color: white;
 }
