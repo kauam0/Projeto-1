@@ -14,16 +14,25 @@
               <div class="profile-header">
                 <img src="user-image.jfif" alt="profile" class="profile-img">
                 <div class="profile-text-container">
-                    <div class="h1"><h1 class="profile-title">Nome do User</h1></div>
+                    <div class="h1"><h1 class="profile-title">{{ request.user.username }}</h1></div>
                     
-                    <p class="profile-email">emaildouser@gmail.com</p>
+                    <p class="profile-email">{{ request.email }}</p>
                 </div>
               </div>
               <div class="menu">
-                <a href="#" class="menu-link">  Account</a>
-                <a href="#" class="menu-link"> Notification</a>
-                <a href="#" class="menu-link"> Setting</a>
-                <a href="#" class="menu-link"> Logout</a>
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-circle-user"></i>
+                    Account</a>
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-bell"></i>
+                     Notification</a>
+                <a href="#" class="menu-link"> 
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                <a href="#" class="menu-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout</a>
+                    
               </div>
         </div>
         <form class="account">
@@ -50,31 +59,49 @@
                     <label>Telefone</label>
                     <input type="tel" placeholder="Telefone">
                 </div>
+            </div>
+            <div class="account-edit">
+                <div class="input-container">
                 <label>Endereço</label>
                 <input type="text" id="address" placeholder="insira seu endereço" class="input">
-            </div>
+                
+                </div>
+            
+            <div class="account-edit">
         <div class="input-container">
             <label>Bairro</label>
             <input type="text" id="bairro" placeholder="insira seu bairro" class="input">
         </div>
+    </div>
+        </div>
+        <div class="account-edit">
         <div class="input-container">
             <label>Cidade</label>
             <input type="text" id="cidade" placeholder="insira sua cidade" class="input">
         </div>
+    
+    <div class="account-edit">
         <div class="input-container">
-            <label>Número e Complemento</label>
+            <label>Nº e Complemento</label>
             <input type="" placeholder="numero e complemento">
         </div>
+    </div></div>
+    <div class="account-edit">
                     <div class="input-container">
                 <span class="material-symbols-outlined">mail</span>
                 <input type="email" placeholder="insira seu email">
             </div>
+        </div>
+        <div class="account-edit">
             <div class="input-container">
                 <span class="material-symbols-outlined">lock</span>
                 <input type="password" placeholder="insira sua senha">
             </div>
+        </div>
             </div>
+        </div>
+        
         </form>
-    </div>
+    </div>  
 </body>
 </html>

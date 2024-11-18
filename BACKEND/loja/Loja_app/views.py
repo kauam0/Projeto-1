@@ -4,6 +4,8 @@ from django.contrib.auth.models import User, Permission
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
 from django.http import HttpResponse
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 
 
 def home(request):
@@ -55,8 +57,12 @@ def home(request):
 def carrinho(request):
     return render(request, 'usuarios/carrinho/index.html')
 
+
+@login_required(login_url="/auth/login/")
 def tela_de_usuario(request):
-    return render(request, 'usuarios/tela/index.html')
+    if request.user.is_authenticated:
+        return render(request, 'usuarios/tela/index.html')
+    return HttpResponse('nao autenticado')
  
 def usuarios(request):
     #salvar

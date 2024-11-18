@@ -84,14 +84,23 @@ header nav a {
 .carrinho span {
     font-size: 30px;
 }
+.container-flex {
+    display: flex;
+    max-height: 1500px;
+    border-bottom: black solid 20px;
+}
 .maincontainer{
     display: flex;
-    width: 50%;
+    width: 60%;
     height: 100%;
+    margin-bottom: 40px;
 }
 .containerdeproduto{
-    width: 950px;
+    width: 60%;
+    max-width: 950px;
     height: 1000px;
+    flex: 1;
+    flex-direction: column;
 }
 .container1 {
     position: relative ;
@@ -112,12 +121,12 @@ header nav a {
     border: black solid 2px;
    align-items: center;
     flex-direction: row;
-    background-image: url('{% static "imgs\home_natal_2024_banner_desktop_a-fome-machuca.jpg" %}');
+    background-image: url('{%static "Projeto-1/BACKEND/loja/static/imgs/nuremberg-germany-july-23-2023-260nw-2339224657.webp" %}');
     background-repeat: no-repeat; /* Não repete a imagem */
     background-position: center; /* Centraliza a imagem */
     background-size: cover; /* Cobre todo o espaço disponível */
     color: #ffff00;
-    height: 500px;
+    height: 380px;
     align-items: center;
 
 }
@@ -206,4 +215,28 @@ header nav a {
 
 .scroll-btn.right {
     right: 10px;
+}
+.slidestop {
+    width: 600px; /* Largura desejada */
+    height: 500px;
+    display: flex; /* Para alinhar o conteúdo */
+    flex-direction: column; /* Para organizar o conteúdo verticalmente */
+    align-items: center;
+    margin-top: 305px;
+}
+.slidestop img{
+    max-width: 550px;
+    max-height: 550px;
+    min-width: none;
+    min-height: none;
+    border: solid gold 15px;
+}
+.navfooter{
+    width: 100%;
+    position: relative;
+    background-color: grey;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-top: black solid 3px;
+    margin-top: 50px;
 }
