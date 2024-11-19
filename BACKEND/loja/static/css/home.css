@@ -110,7 +110,6 @@ header nav a {
 }
 .nome_produtos_destaque{
     color: yellow;
-    margin-top: 120px;
 }
 .container1 {
     position: relative ;
@@ -130,17 +129,21 @@ header nav a {
     position: relative; /* O texto se move com a rolagem */
     margin-left: 20px; /* Ajuste para evitar sobreposição com as imagens */
     color: #fff;
-    width: 20%;
+    width: 98%;
+    height: 400px;
+    background-image: url(C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\home_natal_2024_banner_desktop_a-fome-machuca.jpg);
+    align-items: center;
+    border: solid black;
 }
 .divtexto h2 {
     font-size: 24px; /* Ajuste do tamanho do texto */
     line-height: 1.5;
+    align-items: center;
 }
-.textodoacao{
+.textodoacao h2{
     width: 30%;
     align-items: center;
-    margin-left: 50px;
-    margin-top: 120px;
+    color: yellow;
 }
 .product-wrapper {
     display: flex;
@@ -221,15 +224,19 @@ header nav a {
     right: 10px;
 }
 .slidestop {
-    position: fixed; /* Fixa o contêiner no viewport */
+    display: flex;
     top: 100px; /* Ajuste conforme necessário */
     right: 20px; /* Ajuste conforme necessário */
     z-index: 100; /* Certifique-se de que fique acima do texto */
+    align-items: center;
 }
 .slidestop img {
-    max-width: 300px; /* Tamanho das imagens */
-    max-height: 300px;
+    max-width: 1000px; /* Tamanho das imagens */
+    max-height: 1000px;
     margin-bottom: 20px; /* Espaçamento entre as imagens */
+    height: 450px;
+    width: 520px;
+    align-items: center;
 }
 .navfooter{
     width: 100%;
@@ -258,8 +265,4 @@ header nav a {
     align-items: center;
     display: flex;
     color: white;
-}
-.nome_produtos_destaque{
-    position: fixed;
-
 }
