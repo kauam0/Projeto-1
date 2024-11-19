@@ -48,6 +48,15 @@ def registro (request):
             return HttpResponse('esse email ja existe')
         user = User.objects.create_user(username=nome, email=email, password=senha)
         user.save()
+        novo_usuario = Usuario()
+        novo_usuario.nascimento = request.POST.get('nascimento')
+        novo_usuario.telefone = request.POST.get('telefone')
+        novo_usuario.cep = request.POST.get('cep')
+        novo_usuario.bairro = request.POST.get('bairro')
+        novo_usuario.numero_casa = request.POST.get('numero_casa')
+        novo_usuario.rua = request.POST.get('rua')
+        novo_usuario.complemento = request.POST.get('complemento')
+        novo_usuario.save()
         return HttpResponse('usuario cadastrado com sucesso')
 
 def home(request):
@@ -63,30 +72,6 @@ def tela_de_usuario(request):
     if request.user.is_authenticated:
         return render(request, 'usuarios/tela/index.html')
     return HttpResponse('nao autenticado')
- 
-def usuarios(request):
-    #salvar
-    novo_usuario = Usuario()
-    novo_usuario.nome = request.POST.get('nome')
-    novo_usuario.nascimento = request.POST.get('nascimento')
-    novo_usuario.telefone = request.POST.get('telefone')
-    novo_usuario.email = request.POST.get('email')
-    novo_usuario.senha = request.POST.get('senha')
-    novo_usuario.cep = request.POST.get('cep')
-    novo_usuario.bairro = request.POST.get('bairro')
-    novo_usuario.numero_casa = request.POST.get('numero_casa')
-    novo_usuario.rua = request.POST.get('rua')
-    novo_usuario.complemento = request.POST.get('complemento')
-    novo_usuario.save()
-
-
-    usuarios = {
-        'usuarios' : Usuario.objects.all()
-    }
-    
-    return render(request,'usuarios/home.html',usuarios)
-    
-
 
      
    

@@ -16,7 +16,7 @@
                 <div class="profile-text-container">
                     <div class="h1"><h1 class="profile-title">{{ request.user.username }}</h1></div>
                     
-                    <p class="profile-email">{{ request.email }}</p>
+                    <p class="profile-email">{{ request.user.email }}</p>
                 </div>
               </div>
               <div class="menu">
@@ -46,50 +46,50 @@
             <div class="account-edit">
                 <div class="input-container">
                     <label>Nome Completo</label>
-                    <input type="text" placeholder="Nome Completo">
+                    <input type="text" placeholder="{{ request.user.username }}" readonly>
                 </div>
                 <div class="input-container">
                     <label>Nascimento</label>
-                    <input type="date" placeholder="Data de Nascimento">
+                    <input type="text" placeholder="{{ request.user.nascimento }}" readonly>
                 </div>
             </div>
 
             <div class="account-edit">
                 <div class="input-container">
                     <label>Telefone</label>
-                    <input type="tel" placeholder="Telefone">
+                    <input type="tel" placeholder="{{ telefone }}" readonly>
                 </div>
             </div>
             <div class="account-edit">
                 <div class="input-container">
                 <label>Endereço</label>
-                <input type="text" id="address" placeholder="insira seu endereço" class="input">
+               <p> {{ request.Usuario.rua }} </p>
                 
                 </div>
             
             <div class="account-edit">
         <div class="input-container">
             <label>Bairro</label>
-            <input type="text" id="bairro" placeholder="insira seu bairro" class="input">
+            <input type="text" id="bairro" placeholder="insira seu bairro" class="input" readonly>
         </div>
     </div>
         </div>
         <div class="account-edit">
         <div class="input-container">
             <label>Cidade</label>
-            <input type="text" id="cidade" placeholder="insira sua cidade" class="input">
+            <input type="text" id="cidade" placeholder="insira sua cidade" class="input" readonly>
         </div>
     
     <div class="account-edit">
         <div class="input-container">
             <label>Nº e Complemento</label>
-            <input type="" placeholder="numero e complemento">
+            <input type="" placeholder="numero e complemento" readonly>
         </div>
     </div></div>
     <div class="account-edit">
                     <div class="input-container">
                 <span class="material-symbols-outlined">mail</span>
-                <input type="email" placeholder="insira seu email">
+                <input type="email" placeholder="insira seu email" readonly>
             </div>
         </div>
         <div class="account-edit">
