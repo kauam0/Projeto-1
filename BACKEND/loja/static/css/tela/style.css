@@ -109,20 +109,40 @@ body .container{
     
 }
 .btn-cancel{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    border-radius: 20px;
+    display: flex;
+    /*border: 2px solid rgba(0, 0, 0, 0);*/
+    border-radius: 18px;
+    width: 100px;
     height: 40px;
-    width: 90px;
+    text-decoration: transparent;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: black;
+    transition: 0.2s ease-in-out all;
     
 }
 .btn-save{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    border-radius: 20px;
+    display: flex;
+    /*border: 2px solid rgba(0, 0, 0, 0);*/
+    border-radius: 18px;
+    width: 100px;
     height: 40px;
-    width: 90px;
+    text-decoration: transparent;
+    align-items: center;
+    justify-content: center;
     margin-right: 20px;
+    color: black;
+    transition: 0.2s ease-in-out all;
+    
+}
+.btn-cancel:hover{
+    background-color: rgb(32, 32, 32);
+    color: aliceblue;
+}
+.btn-save:hover{
+    background-color: rgb(32, 32, 32);
+    color: aliceblue;
 }
 .account-edit{
     display: flex;
