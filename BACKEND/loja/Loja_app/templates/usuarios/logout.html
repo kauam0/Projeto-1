@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Logout</title>
+</head>
+<body>
+    <h1>Você tem certeza que deseja sair?</h1>
+    <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+    <a href="{% url 'home' %}" class="btn-cancel">Cancelar</a>
+</body>
+</html>

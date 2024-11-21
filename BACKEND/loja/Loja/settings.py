@@ -127,5 +127,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 LOGOUT_REDIRECT_URL = 'home'
 
+LOGIN_REDIRECT_URL = 'home'

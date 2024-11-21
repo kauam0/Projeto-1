@@ -22,8 +22,9 @@
                 <span class="material-symbols-outlined">search</span>
                 <input type="text" class="pesquiseBar" placeholder="Pesquisar...">
             </div>
+            
             <a href="{% url 'loginn' %}" class="login" id="login">Login</a>
-            <a href="{% url 'tela_de_usuario' %}" class="perfil">Perfil</a>
+            <a href="{% url 'tela_de_usuario' %}" class="perfil">{{ request.user.username }}</a>
             <div class="carrinho">
                 <a href="{% url 'carrinho' %}">
                     <span class="material-symbols-outlined">shopping_cart</span>

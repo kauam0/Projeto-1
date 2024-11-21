@@ -16,7 +16,7 @@
                 <div class="profile-text-container">
                     <div class="h1"><h1 class="profile-title">{{ request.user.username }}</h1></div>
                     
-                    <p class="profile-email">{{ request.email }}</p>
+                    <p class="profile-email"></p>
                 </div>
               </div>
               <div class="menu">
@@ -26,14 +26,16 @@
                 <a href="#" class="menu-link">
                     <i class="fa-solid fa-bell"></i>
                      Notification</a>
-                <a href="#" class="menu-link"> 
-                    <i class="fa-solid fa-gear"></i>
-                    Settings
-                <a href="#" class="menu-link">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    Logout</a>
-                    
+
+                     <a href="{% url 'home' %}" class="btn-cancel">voltar</a>
               </div>
+            {% if request.user.is_authenticated %}
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                {% endif %}
+
         </div>
         <form class="account">
             <div class="account-header">
