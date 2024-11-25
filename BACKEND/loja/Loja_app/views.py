@@ -3,17 +3,23 @@ from .models import Usuario
 from django.contrib.auth.models import User, Permission
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
+
 from django.http import HttpResponse
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 
 
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
+from .forms import EmailAuthenticationForm
+
+
 def home(request):
     return render(request, 'usuarios/home.html')
- 
 
 def loginn (request):
     if request.method == 'GET':
+
             return render (request, 'usuarios/regL/login.html')
     else: 
         username = request.POST.get('nome')
@@ -27,11 +33,10 @@ def loginn (request):
             return render(request, 'usuarios/home.html')
         else:
             return HttpResponse('nao autenticado')
+        
 
 
-
-    
-
+       
 
 
 def registro (request):
@@ -44,6 +49,7 @@ def registro (request):
         
         
         user = User.objects.filter(email=email).first()
+        user.set_password(senha)
         if user:
             return HttpResponse('esse email ja existe')
         user = User.objects.create_user(username=nome, email=email, password=senha)
@@ -54,6 +60,7 @@ def home(request):
     return render(request, 'usuarios/home.html')
  
 
+
 def carrinho(request):
     return render(request, 'usuarios/carrinho/index.html')
 
@@ -63,6 +70,7 @@ def tela_de_usuario(request):
     if request.user.is_authenticated:
         return render(request, 'usuarios/tela/index.html')
     return HttpResponse('nao autenticado')
+
  
 def usuarios(request):
     #salvar
@@ -88,6 +96,9 @@ def usuarios(request):
     
 
 
+
+
+   
      
    
 
