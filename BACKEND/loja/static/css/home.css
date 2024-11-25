@@ -172,11 +172,15 @@ header nav a {
     align-items: flex-start;
     gap: 20px;
     border-radius: 50px;
-    overflow: hidden; /* Adiciona overflow: hidden */
-    background-color: #fff; /* Adicione uma cor de fundo para visualizar o arredondamento */
+    overflow: hidden;
+    background-color: #fff;
 }
 .ongscontainer img{
-    border-radius: 50px; /* Aplica o border-radius nas imagens dentro de .ongscontainer */
+    border-radius: 50px; /* Coloca border-radius nas imagens dentro da .ongscontainer */
+    width: 100%; /* Ajusta a largura para se adaptar */
+    height: 300px; /* Altura fixa da imagem */
+    object-fit: scale-down; /* Ajusta a imagem para cobrir sem distorcer */
+    flex-direction: row;
 }
 .ongsimgs{
     background-color: black;
@@ -188,7 +192,7 @@ header nav a {
     height: 300px;
     padding: auto;
     flex-shrink: 0;
-}
+} 
 .produtonovo {
     background-color: #fff;
     border: 4px solid black;
@@ -205,19 +209,19 @@ header nav a {
 
 
 .productimg img {
-    width: 100%; /* Ajusta a largura para se adaptar ao contêiner */
+    width: 100%; /* Ajusta a largura para se adaptar */
     height: 300px; /* Altura fixa da imagem */
-    object-fit: scale-down; /* Ajusta a imagem para cobrir o contêiner sem distorcer */
+    object-fit: scale-down; /* Ajusta a imagem para cobrir sem distorcer */
     flex-direction: row;
-    position: relative; /* Agora as imagens serão estáticas */
+    position: relative; /* Agora as imagens serão estaticas */
     border-radius: 50px;
     
 }
 .static-images {
-    position: fixed; /* Fixa as imagens no viewport */
-    top: 50px;       /* Ajuste conforme necessário */
-    left: 20px;      /* Ajuste conforme necessário */
-    z-index: 10;     /* Garante que fiquem sobre o texto */
+    position: fixed; /* Fixa as imagens */
+    top: 50px;       /* Ajuste  */
+    left: 20px;      /* Ajuste  */
+    z-index: 10;     /* sobrepoem o texto */
 }
 
 .textop1, .textotop1 {
