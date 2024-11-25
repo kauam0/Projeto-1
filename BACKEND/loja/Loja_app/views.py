@@ -73,8 +73,6 @@ def tela_de_usuario(request):
         return render(request, 'usuarios/tela/index.html')
     return HttpResponse('nao autenticado')
 
-     
-   
 
     #salvar localiçao
     

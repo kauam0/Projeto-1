@@ -13,5 +13,4 @@ urlpatterns = [
 
     path('tela_de_usuario/' , views.tela_de_usuario, name='tela_de_usuario'),
 
-
     ]
