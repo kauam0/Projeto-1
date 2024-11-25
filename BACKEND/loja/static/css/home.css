@@ -9,7 +9,7 @@
 
 body {
     font-family: "Ubuntu", sans-serif;
-    background-color: #05EDF0;
+    background-color: #80B8B0;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -127,18 +127,21 @@ header nav a {
 }
 .divtexto {
     position: relative; /* O texto se move com a rolagem */
-    margin-left: 20px; /* Ajuste para evitar sobreposição com as imagens */
+    margin-left: 65px; /* Ajuste para evitar sobreposição com as imagens */
     color: #fff;
-    width: 98%;
+    width: 93%;
     height: 400px;
     background-image: url(C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\home_natal_2024_banner_desktop_a-fome-machuca.jpg);
     align-items: center;
     border: solid black;
+    border-radius: 30px; /* Ajuste o valor para arredondar mais ou menos */
 }
 .divtexto h2 {
     font-size: 24px; /* Ajuste do tamanho do texto */
     line-height: 1.5;
     align-items: center;
+    margin-top: 150px;
+    margin-left: 65px;
 }
 .textodoacao h2{
     width: 30%;
@@ -161,8 +164,20 @@ header nav a {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px; /* Espaçamento entre os itens */
+    border-radius: 5%;
 }
-
+.ongscontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 50px;
+    overflow: hidden; /* Adiciona overflow: hidden */
+    background-color: #fff; /* Adicione uma cor de fundo para visualizar o arredondamento */
+}
+.ongscontainer img{
+    border-radius: 50px; /* Aplica o border-radius nas imagens dentro de .ongscontainer */
+}
 .produtonovo {
     background-color: #fff;
     border: 4px solid black;
@@ -174,6 +189,7 @@ header nav a {
     display: inline-flex;
     flex-direction: column;
     padding: auto;
+    border-radius: 50px;
 }
 
 .productimg img {
@@ -182,6 +198,8 @@ header nav a {
     object-fit: scale-down; /* Ajusta a imagem para cobrir o contêiner sem distorcer */
     flex-direction: row;
     position: relative; /* Agora as imagens serão estáticas */
+    border-radius: 50px;
+    
 }
 .static-images {
     position: fixed; /* Fixa as imagens no viewport */
@@ -234,16 +252,18 @@ header nav a {
     max-width: 1000px; /* Tamanho das imagens */
     max-height: 1000px;
     margin-bottom: 20px; /* Espaçamento entre as imagens */
-    height: 450px;
-    width: 520px;
+    height: 420px;
+    width: 650px;
     align-items: center;
+    border: solid black 5px;
+    border-radius: 80px; /* Ajuste o valor para arredondar mais ou menos */
+    background-color: black;
 }
 .navfooter{
-    width: 100%;
+
     display: flex;
     background-color: grey;
     margin-bottom: 0;
-    
     border-top: black solid 3px;
     margin-top: 50px;
 }
@@ -251,6 +271,7 @@ header nav a {
     display:flex;
     flex-direction: row;
     margin-left: 40px;
+
 }
 
 .navfooter li{
@@ -265,4 +286,7 @@ header nav a {
     align-items: center;
     display: flex;
     color: white;
+}
+.nome_produtos_promo{
+    color: yellow;
 }
