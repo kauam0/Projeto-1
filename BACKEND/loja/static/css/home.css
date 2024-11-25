@@ -191,6 +191,17 @@ header nav a {
     padding: auto;
     border-radius: 50px;
 }
+.ongsimgs{
+    background-color: black;
+    border-radius: 90px;
+    border: solid black;
+    flex-direction: column;
+    display: list-item;
+    width: 300px;
+    height: 300px;
+    padding: auto;
+    flex-shrink: 0;
+}
 
 .productimg img {
     width: 100%; /* Ajusta a largura para se adaptar ao contêiner */
