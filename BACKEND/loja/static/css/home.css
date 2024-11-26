@@ -175,7 +175,13 @@ header nav a {
     overflow: hidden;
     background-color: #fff;
 }
-
+.ongscontainer img{
+    border-radius: 50px; /* Coloca border-radius nas imagens dentro da .ongscontainer */
+     width: 100%; /* Ajusta a largura para se adaptar */
+    height: 300px; /* Altura fixa da imagem */
+    object-fit: scale-down; /* Ajusta a imagem para cobrir sem distorcer */
+    flex-direction: row;
+}
 .ongsimgs{
     background-color: black;
     border-radius: 90px;
@@ -187,13 +193,6 @@ header nav a {
     padding: auto;
     flex-shrink: 0;
 } 
-.ongsimgs img{
-    border-radius: 50px; /* Coloca border-radius nas imagens dentro da .ongscontainer */
-    width: 100%; /* Ajusta a largura para se adaptar */
-    height: 300px; /* Altura fixa da imagem */
-    object-fit: scale-down; /* Ajusta a imagem para cobrir sem distorcer */
-    flex-direction: row;
-}
 .produtonovo {
     background-color: #fff;
     border: 4px solid black;
