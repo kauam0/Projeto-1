@@ -26,16 +26,14 @@
                     Faça o Login para Acessar o Site Completo
                 </h3>
             </div>
-<<<<<<< HEAD
+
             <form class="login-card-form" action="{% url 'loginn' %}" method="POST">
-=======
+
             <form class="login-card-form" method="post">
->>>>>>> pao_de_maionese
                 {% csrf_token %}
                 
                 
                 <!-- formulario login  -->
-<<<<<<< HEAD
             <div class="form-item">
                 <!-- itemlização do formulario com email, senha, "lembra-me" e 
                 esqueci a senha  -->
@@ -47,19 +45,8 @@
                 <span class="material-symbols-outlined">lock</span>
                 <input type="password" placeholder="insira sua senha" name="senha">
             </div>
-=======
-                <div class="form-item">
-                    <span class="material-symbols-outlined">email</span>
-                    {{ form.email.label_tag }}
-                    {{ form.email }}
-                </div>
-            
-                <div class="form-item">
-                    <span class="material-symbols-outlined">lock</span>
-                    {{ form.password.label_tag }}
-                    {{ form.password }}
-                </div>
->>>>>>> pao_de_maionese
+
+
             <div class="remember">
                 <input type="checkbox" id="rememberCheckbox">
                 <label for="rememberCheckbox">Lembra-me</label>

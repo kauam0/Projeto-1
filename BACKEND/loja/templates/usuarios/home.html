@@ -22,14 +22,11 @@
                 <span class="material-symbols-outlined">search</span>
                 <input type="text" class="pesquiseBar" placeholder="Pesquisar...">
             </div>
-<<<<<<< HEAD
+
             
             <a href="{% url 'loginn' %}" class="login" id="login">Login</a>
             <a href="{% url 'tela_de_usuario' %}" class="perfil">{{ request.user.username }}</a>
-=======
-            <a href="{% url 'loginn' %}" class="login" id="login">Login</a>
-            <a href="#" class="perfil">Perfil</a>
->>>>>>> pao_de_maionese
+
             <div class="carrinho">
                 <a href="">
                     <span class="material-symbols-outlined">shopping_cart</span>
@@ -40,12 +37,11 @@
     <div class="divtexto">
         <div class="textodoacao">
             <h2> 
-                Somos uma empresa feita da comunidade para comunidade.
-                Doe para ajudar as familias que necessitam.
+                Somos uma empresa feita da comunidade para comunidade. Doe para ajudar as famílias que necessitam.
             </h2>
         </div>
     </div>
-    
+
     <div class="container-flex">
         <div class="maincontainer">
             <div class="containerdeproduto">
@@ -54,35 +50,40 @@
                     <div class="product-wrapper">
                         <button class="scroll-btn left" onclick="scrollContainer(-1, '.product-wrapper')">&#9664;</button>
                         <div class="containerproduct">
-                            <h2>PRODUTOS EM DESTAQUE</h2>
+                            <div class="nome_produtos_destaque"><h2>Produtos em destaque</h2></div>
                             <div class="productimg">
                                 <div class="produtonovo">
                                     <img src="{% static 'imgs/asics metarise foto.jpg' %}" alt="Asics Metarise">
                                     <div class="textop1">
+                                        <p>R$759,99</p>
                                         <a href="Asics metarise.html">Asics Metarise</a>
                                     </div>
                                 </div>
                                 <div class="produtonovo"> 
                                     <img src="{% static 'imgs/lebronha.webp' %}" alt="Lebronha">
                                     <div class="textop1">
+                                        <p>R$</p>
                                         <a href="lebronha.html">Lebron away</a>
                                     </div>
                                 </div>
                                 <div class="produtonovo">
                                     <img src="{% static 'imgs/precision 6.avif' %}" alt="Precision VI">
                                     <div class="textop1">
+                                        <p>R$</p>
                                         <a href="precision 6.avif">Precision VI</a>
                                     </div>
                                 </div>
                                 <div class="produtonovo">
                                     <img src="{% static 'imgs/barata.webp' %}" alt="Barata de brinquedo">
                                     <div class="textop1">
+                                        <p>R$</p>
                                         <a href="barata.webp">Barata de brinquedo</a>
                                     </div>
                                 </div>
                                 <div class="produtonovo">
                                     <img src="{% static 'imgs/0823740003-A.webp' %}" alt="Saguadin">
                                     <div class="textop1">
+                                        <p>R$</p>
                                         <a href="#">Giannis Imortality 3</a>
                                     </div>
                                 </div>
@@ -96,30 +97,27 @@
                     <div class="product-wrapper">
                         <button class="scroll-btn left" onclick="scrollContainer(-1, '.container2 .product-wrapper')">&#9664;</button>
                         <div class="containerproduct2">
-                            <h2>PRODUTOS EM PROMOÇÃO</h2>
+                            <div class="nome_produtos_promo"><h2>Produtos Em Promoção</h2></div>
                             <div class="productimg">
-                                <div class="produtonovo">
-                                    <img src="{% static 'imgs/nike-lebron-11-what-the.jpg' %}" alt="Lebron 11">
-                                    <div class="textop1">
-                                        <a href="nike-lebron-11-what-the.html">Lebron 11</a>
-                                    </div>
-                                </div>
                                 <div class="produtonovo">
                                     <img src="{% static 'imgs/fly by mid.webp' %}" alt="Fly by Mid 3">
                                     <div class="textop1">
+                                        <p>R$500</p>
                                         <a href="fly-by-mid.html">Fly by Mid 3</a>
                                     </div>
                                 </div>
                                 <div class="produtonovo">
                                     <img src="{% static 'imgs/Kobe 5 bruce.png' %}" alt="Kobe 5 Proto Bruce Lee">
                                     <div class="textop1">
+                                        <p>R$</p>
                                         <a href="Kobe bryan">Kobe Protro 5 Brucee Lee</a>
                                     </div>
                                 </div>
                                 <div class="produtonovo">
-                                    <img src="{% static 'C:\Users\Henrique\Documents\Tcc\Projeto-1\BACKEND\loja\static\imgs\tipos-de-carro-hatch-new-city-hatchback.jpg' %}">
+                                    <img src="{% static 'C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\tipos-de-carro-hatch-new-city-hatchback.jpg' %}">
                                     <div class="textop1">
-                                        <a href="C:\Users\Henrique\Documents\Tcc\Projeto-1\BACKEND\loja\static\imgs\tipos-de-carro-hatch-new-city-hatchback.jpg">Carro</a>
+                                        <p>R$ 8000,00</p>
+                                        <a href="C:\Users\Henrique\Documents\Tcc\Projeto-1\BACKEND\loja\static\imgs\tipos-de-carro-hatch-new-city-hatchback.jpg">Honda Civic 2014</a>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +130,8 @@
 
         <!-- Div slidestop ao lado do maincontainer -->
         <div class="slidestop">
-            <img src="{% static 'C:\Users\Henrique\Documents\Tcc\Projeto-1\BACKEND\loja\static\imgs\ciencia-da-computacao-2.jpg' %}" alt="Imagem">
+            <img src="{% static 'C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\7ecc18_5109a7e891bf4b06a6f5eac0c81632ff~mv2.png' %}"Sua mensagem de commit aqui"
+            ' %}" alt="Imagem">
         </div>
     </div>
 
@@ -140,13 +139,13 @@
     <div class="container-gerais">
         <div class="product-wrapper">
             
-            <div class="containerproduct">
-                <h2>PRODUTOS</h2>
+            <div class="ongscontainer">
+                <h2>ONGS PARA DOAÇÃO</h2>
                 <div class="productimg">
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo1.jpg' %}" alt="Produto 1">
+                        <img src="{% static 'C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\Brasil_Escola.jpg' %}" alt="Produto 1">
                         <div class="textop1">
-                            <a href="#">Produto 1</a>
+                            <a href="https://brasilescola.uol.com.br/geografia/organizacao-nao-governamental-ong.htm">Brasil Escola</a>
                         </div>
                     </div>
                     <div class="produtonovo">
@@ -168,13 +167,13 @@
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 5">
                         <div class="textop1">
                             <a href="#">Produto 5</a>
                         </div>
                 </div>
                 <div class="produtonovo">
-                    <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                    <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 6">
                     <div class="textop1">
                         <a href="#">Produto 6</a>
                     </div>
@@ -188,37 +187,37 @@
                 <h2>PRODUTOS</h2>
                 <div class="productimg">
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo5.jpg' %}" alt="Produto 5">
+                        <img src="{% static 'imgs/exemplo5.jpg' %}" alt="Produto 7">
                         <div class="textop1">
                             <a href="#">Produto 7</a>
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo6.jpg' %}" alt="Produto 6">
+                        <img src="{% static 'imgs/exemplo6.jpg' %}" alt="Produto 8">
                         <div class="textop1">
                             <a href="#">Produto 8</a>
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo7.jpg' %}" alt="Produto 7">
+                        <img src="{% static 'imgs/exemplo7.jpg' %}" alt="Produto 9">
                         <div class="textop1">
                             <a href="#">Produto 9</a>
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 10">
                         <div class="textop1">
                             <a href="#">Produto 10</a>
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 11">
                         <div class="textop1">
                             <a href="#">Produto 11</a>
                         </div>
                     </div>
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 8">
+                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 12">
                         <div class="textop1">
                             <a href="#">Produto 12</a>
                         </div>
@@ -230,9 +229,13 @@
     </div>
 </div>
     <div class="navfooter">
-    text
+<li><a href="#">FAQ</a></li>
+<li><a href="#">Suporte</a></li>
+<li><a href="#">SAC</a></li>
+<li><a href="#">Ligue 0000-0000</a></li>
+<li><a href="#">Informações sobre nós</a></li>
+<li><a href="# ">Acessibilidade</a></li>
     </div>    
-
 
     <script type="text/javascript" src="{% static 'javaS/index.js' %}"></script>
     <script>

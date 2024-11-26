@@ -9,7 +9,7 @@
 
 body {
     font-family: "Ubuntu", sans-serif;
-    background-color: aliceblue;
+    background-color: #80B8B0;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -102,6 +102,15 @@ header nav a {
     flex: 1;
     flex-direction: column;
 }
+.slides_in_top{
+     position: fixed; /* Fixa o contêiner no viewport */
+    top: 100px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    z-index: 100; /* Certifique-se de que fique acima do texto */
+}
+.nome_produtos_destaque{
+    color: yellow;
+}
 .container1 {
     position: relative ;
     width: 100%;
@@ -116,33 +125,28 @@ header nav a {
     flex-direction: column;
     overflow: hidden; /* Oculta o excesso fora do contêiner */
 }
-.divtexto{
-    width: 100%;
-    border: black solid 2px;
-   align-items: center;
-    flex-direction: row;
-    background-image: url('{%static "Projeto-1/BACKEND/loja/static/imgs/nuremberg-germany-july-23-2023-260nw-2339224657.webp" %}');
-    background-repeat: no-repeat; /* Não repete a imagem */
-    background-position: center; /* Centraliza a imagem */
-    background-size: cover; /* Cobre todo o espaço disponível */
-    color: #ffff00;
-    height: 380px;
+.divtexto {
+    position: relative; /* O texto se move com a rolagem */
+    margin-left: 65px; /* Ajuste para evitar sobreposição com as imagens */
+    color: #fff;
+    width: 93%;
+    height: 400px;
+    background-image: url(C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\home_natal_2024_banner_desktop_a-fome-machuca.jpg);
     align-items: center;
-
+    border: solid black;
+    border-radius: 30px; /* Ajuste o valor para arredondar mais ou menos */
 }
-.divtexto p{
-    flex-direction: row;
-    display: flex;
-    margin: 10px;
+.divtexto h2 {
+    font-size: 24px; /* Ajuste do tamanho do texto */
+    line-height: 1.5;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 65px;
+}
+.textodoacao h2{
     width: 30%;
+    align-items: center;
     color: yellow;
-    align-items: center;
-}
-.textodoacao{
-    width: 30%;
-    align-items: center;
-    margin-left: 50px;
-    margin-top: 120px;
 }
 .product-wrapper {
     display: flex;
@@ -160,8 +164,31 @@ header nav a {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px; /* Espaçamento entre os itens */
+    border-radius: 5%;
 }
-
+.ongscontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    border-radius: 50px;
+    overflow: hidden; /* Adiciona overflow: hidden */
+    background-color: #fff; /* Adicione uma cor de fundo para visualizar o arredondamento */
+}
+.ongscontainer img{
+    border-radius: 50px; /* Aplica o border-radius nas imagens dentro de .ongscontainer */
+}
+.ongsimgs{
+    background-color: black;
+    border-radius: 90px;
+    border: solid black;
+    flex-direction: row;
+    display: block;
+    width: 300px;
+    height: 300px;
+    padding: auto;
+    flex-shrink: 0;
+}
 .produtonovo {
     background-color: #fff;
     border: 4px solid black;
@@ -173,14 +200,24 @@ header nav a {
     display: inline-flex;
     flex-direction: column;
     padding: auto;
+    border-radius: 50px;
 }
+
 
 .productimg img {
     width: 100%; /* Ajusta a largura para se adaptar ao contêiner */
     height: 300px; /* Altura fixa da imagem */
     object-fit: scale-down; /* Ajusta a imagem para cobrir o contêiner sem distorcer */
-    display: flex;
     flex-direction: row;
+    position: relative; /* Agora as imagens serão estáticas */
+    border-radius: 50px;
+    
+}
+.static-images {
+    position: fixed; /* Fixa as imagens no viewport */
+    top: 50px;       /* Ajuste conforme necessário */
+    left: 20px;      /* Ajuste conforme necessário */
+    z-index: 10;     /* Garante que fiquem sobre o texto */
 }
 
 .textop1, .textotop1 {
@@ -217,26 +254,51 @@ header nav a {
     right: 10px;
 }
 .slidestop {
-    width: 600px; /* Largura desejada */
-    height: 500px;
-    display: flex; /* Para alinhar o conteúdo */
-    flex-direction: column; /* Para organizar o conteúdo verticalmente */
+    display: flex;
+    top: 100px; /* Ajuste conforme necessário */
+    right: 20px; /* Ajuste conforme necessário */
+    z-index: 100; /* Certifique-se de que fique acima do texto */
     align-items: center;
-    margin-top: 305px;
 }
-.slidestop img{
-    max-width: 550px;
-    max-height: 550px;
-    min-width: none;
-    min-height: none;
-    border: solid gold 15px;
+.slidestop img {
+    max-width: 1000px; /* Tamanho das imagens */
+    max-height: 1000px;
+    margin-bottom: 20px; /* Espaçamento entre as imagens */
+    height: 420px;
+    width: 650px;
+    align-items: center;
+    border: solid black 5px;
+    border-radius: 80px; /* Ajuste o valor para arredondar mais ou menos */
+    background-color: black;
 }
 .navfooter{
-    width: 100%;
-    position: relative;
+
+    display: flex;
     background-color: grey;
     margin-bottom: 0;
-    padding-bottom: 0;
     border-top: black solid 3px;
     margin-top: 50px;
+}
+.navfooter a{
+    display:flex;
+    flex-direction: row;
+    margin-left: 40px;
+
+}
+
+.navfooter li{
+    align-items: center;
+    display: flex;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.navfooter li a{
+    align-items: center;
+    display: flex;
+    color: white;
+}
+.nome_produtos_promo{
+    color: yellow;
 }
