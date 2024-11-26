@@ -48,9 +48,20 @@
             <button class="scroll-btn left" onclick="scrollContainer(-1, '.product-wrapper')">&#9664;</button>
             <div class="containerproduct">
                 <h2>PRODUTOS EM DESTAQUE</h2>
+                {% for produto in produtos %}
                 <div class="productimg">
                     <div class="produtonovo">
-                        <img src="{% static 'imgs/asics metarise foto.jpg' %} " alt="Asics Metarise">
+                        {% for imagem in produto.imagemprodutos_set.all %}
+                        <img src="{{ imagem.imagem.url }}" alt="{{ produto.nome_produtos }}"> 
+                        {% endfor %} 
+                        <h2>{{ produto.nome_produtos }}</h2>
+                        <p>{{ produto.descricao_produto }}</p>
+                        <p>preço: {{ produto.preco_produtos }}</p>
+                        <p> categoria: {{ produto.categoria_produtos }} </p>
+                
+                        
+                    
+                    {% endfor %}
                         <div class="textop1">
                             <a href="Asics metarise.html">Asics Metarise</a>
                         </div>

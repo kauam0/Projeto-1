@@ -6,10 +6,12 @@ from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .forms import EmailAuthenticationForm
+from produtos.models import Produtos
 
 def home(request):
-    return render(request, 'usuarios/home.html')
- 
+      produtos = Produtos.objects.all()
+      return render(request,'usuarios/home.html', {'produtos': produtos})
+
 def loginn(request):
     return render(request, 'usuarios/regL/login.html')
 

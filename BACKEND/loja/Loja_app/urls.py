@@ -6,6 +6,7 @@ urlpatterns = [
     
 
     path('registro/', views.registro, name='listagem_usuarios')
+    
 
     ]
 
