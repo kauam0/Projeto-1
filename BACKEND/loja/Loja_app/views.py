@@ -61,9 +61,19 @@ def carrinho(request):
 @login_required(login_url="/auth/login/")
 def tela_de_usuario(request):
     if request.user.is_authenticated:
+        return render(request, 'usuarios/tela/perfil.html')
+    return HttpResponse('nao autenticado')
+
+@login_required(login_url="/auth/login/")
+def tela_edit(request):
+    if request.user.is_authenticated:
         return render(request, 'usuarios/tela/index.html')
     return HttpResponse('nao autenticado')
  
+
+
+
+
 def usuarios(request):
     #salvar
     novo_usuario = Usuario()
