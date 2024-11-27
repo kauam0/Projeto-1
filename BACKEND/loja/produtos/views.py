@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .form import dadosProduto, imagemProduto
 from django.http import HttpResponse
-
+from .models import Produtos
 
 def  criar_produto(request):
   
@@ -25,8 +25,8 @@ def  criar_produto(request):
         'form_imagem': form_imagem,
     })
 
-# def lista_produto(request):
-#     produtos = Produtos.objects.all()
-#     return render(request,'usuarios/home.html', {'produtos': produtos})
+def lista_produto(request):
+    produtos = Produtos.objects.all()
+    return render(request,'usuarios/home.html', {'produtos': produtos})
     
 
