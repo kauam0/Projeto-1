@@ -1,3 +1,4 @@
+
 {% load static %}
 
 <!DOCTYPE html>
@@ -17,18 +18,12 @@
             </a>
             <a href="#" class="cep">CEP</a>
             <a href="#" class="promocoes">Promoções</a>
-            <a href="#" class="categorias">Categorias</a>
-            <div class="searchContainer">
-                <span class="material-symbols-outlined">search</span>
-                <input type="text" class="pesquiseBar" placeholder="Pesquisar...">
-            </div>
-
+            <a href="https://brasil.un.org/pt-br/about/un-entities-in-country" class="categorias">Doação</a>
             
             <a href="{% url 'loginn' %}" class="login" id="login">Login</a>
-            <a href="{% url 'tela_de_usuario' %}" class="perfil">{{ request.user.username }}</a>
-
+            <a href="{% url 'tela_de_usuario' %}" class="perfil">Perfil</a>
             <div class="carrinho">
-                <a href="">
+                <a href="index.html">
                     <span class="material-symbols-outlined">shopping_cart</span>
                 </a>
             </div>
@@ -130,7 +125,7 @@
 
         <!-- Div slidestop ao lado do maincontainer -->
         <div class="slidestop">
-            <img src="{% static 'C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\7ecc18_5109a7e891bf4b06a6f5eac0c81632ff~mv2.png' %}"Sua mensagem de commit aqui"
+            <img src="{% static 'imgs/Doacaoacima.png' %}"Sua mensagem de commit aqui"
             ' %}" alt="Imagem">
         </div>
     </div>
@@ -139,89 +134,34 @@
     <div class="container-gerais">
         <div class="product-wrapper">
             
-            <div class="ongscontainer">
-                <h2>ONGS PARA DOAÇÃO</h2>
+            <div class="containerproduct">
+                <h2>Produtos</h2>
                 <div class="productimg">
                     <div class="produtonovo">
-                        <img src="{% static 'C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\Brasil_Escola.jpg' %}" alt="Produto 1">
-                        <div class="textop1">
-                            <a href="https://brasilescola.uol.com.br/geografia/organizacao-nao-governamental-ong.htm">Brasil Escola</a>
-                        </div>
+                        {% for produto in produtos %}
+                        <div class="produtonovo">
+                        {% for imagem in produto.imagemprodutos_set.all %}
+                     
+                        <img src="{{ imagem.imagem.url }}" alt="{{ produto.nome_produtos }}">
+                        <h2>{{ produto.nome_produtos }}</h2>
+                        <p>{{ produto.descricao_produto }}</p>
+                        <p>preço: {{ produto.preco_produtos }}</p>
+                        <p> categoria: {{ produto.categoria_produtos }} </p>
+                    
                     </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo2.jpg' %}" alt="Produto 2">
-                        <div class="textop1">
-                            <a href="#">Produto 2</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo3.jpg' %}" alt="Produto 3">
-                        <div class="textop1">
-                            <a href="#">Produto 3</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo4.jpg' %}" alt="Produto 4">
-                        <div class="textop1">
-                            <a href="#">Produto 4</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 5">
-                        <div class="textop1">
-                            <a href="#">Produto 5</a>
-                        </div>
-                </div>
-                <div class="produtonovo">
-                    <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 6">
-                    <div class="textop1">
-                        <a href="#">Produto 6</a>
+                        {% endfor %} 
+                                            
+                    {% endfor %}
                     </div>
             </div>
-            
+            </div>
         </div>
-
+        <br>
         <div class="product-wrapper">
-            
             <div class="containerproduct2">
-                <h2>PRODUTOS</h2>
-                <div class="productimg">
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo5.jpg' %}" alt="Produto 7">
-                        <div class="textop1">
-                            <a href="#">Produto 7</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo6.jpg' %}" alt="Produto 8">
-                        <div class="textop1">
-                            <a href="#">Produto 8</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo7.jpg' %}" alt="Produto 9">
-                        <div class="textop1">
-                            <a href="#">Produto 9</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 10">
-                        <div class="textop1">
-                            <a href="#">Produto 10</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 11">
-                        <div class="textop1">
-                            <a href="#">Produto 11</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/exemplo8.jpg' %}" alt="Produto 12">
-                        <div class="textop1">
-                            <a href="#">Produto 12</a>
-                        </div>
-                    </div>
+                <a href="https://brasil.un.org/pt-br/about/un-entities-in-country" class="link-slogandoacao">
+                    <div class="slogandoacao"></div>
+                </a>
                 </div>
             </div>
            
@@ -240,6 +180,8 @@
     <script type="text/javascript" src="{% static 'javaS/index.js' %}"></script>
     <script>
         document.querySelector('.divtexto').style.backgroundImage = "url('{% static 'imgs/home_natal_2024_banner_desktop_a-fome-machuca.jpg' %}')";
+        document.querySelector('.slogandoacao').style.backgroundImage = "url('{% static 'imgs/Doacaoslogan.jpg' %}')";
+        document.querySelector('.slogandoacao').style.backgroundSize = "cover";
     </script>
 </body>
 </html>

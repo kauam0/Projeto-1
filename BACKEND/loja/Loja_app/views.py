@@ -13,9 +13,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .forms import EmailAuthenticationForm
 
-
 def home(request):
     return render(request, 'usuarios/home.html')
+ 
 
 def loginn (request):
     if request.method == 'GET':

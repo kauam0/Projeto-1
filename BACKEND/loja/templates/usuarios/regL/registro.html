@@ -12,6 +12,27 @@
     <title>login</title>
 </head>
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="home.html" class="logo">
+                <img src="{% static 'imgs/20240625_172008808(1).png' %}" alt="logo">
+            </a>
+            <a href="#" class="cep">CEP</a>
+            <a href="#" class="promocoes">Promoções</a>
+            <a href="https://brasil.un.org/pt-br/about/un-entities-in-country" class="categorias">Doação</a>
+            <div class="searchContainer">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" class="pesquiseBar" placeholder="Pesquisar...">
+            </div>
+            <a href="{% url 'loginn' %}" class="login" id="login">Login</a>
+            <a href="#" class="perfil">Perfil</a>
+            <div class="carrinho">
+                <a href="index.html">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+            </div>
+        </nav>
+    </header>
     <div class="container">
     <div class="registro-container">
         <div class="registro-card">
