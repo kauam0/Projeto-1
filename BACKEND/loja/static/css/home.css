@@ -146,8 +146,10 @@ header nav a {
         color: black;
         width: 100%;
         max-width: 1500px;
-        height: 400px; /* Tamanho fixo, pode ser alterado */
-        background-image: url('static/imgs/ONU-ICM.png');
+        height: 600px; /* Tamanho fixo, pode ser alterado */
+        background-image: url('static/imgs/mudança.jpg');
+        background-size: cover;
+        background-position: center;
         border: solid black;
         border-radius: 30px;
         overflow: visible;
@@ -155,9 +157,10 @@ header nav a {
         gap: 10px;
         margin-left: 6%;
         margin-bottom: 5px;
+
 }
 .slogandoacao img{
-    align-items: center;
+    height: 20px;
 }
 .slogandoacao h2 {
     bottom: 20px;
@@ -204,7 +207,10 @@ header nav a {
     width: 1600px;
     overflow: visible;
 }
-
+.containerproduct2 img{
+    align-items: center;
+    height: 20px;
+}
 .ongscontainer {
     display: flex;
     flex-direction: row;
