@@ -90,8 +90,9 @@ header nav a {
     height: 100%;
 }
 .containerdeproduto{
-    width: 950px;
-    height: 1000px;
+    display: flex; /* Usando flexbox para alinhar os produtos */
+    flex-wrap: wrap; /* Permite que os produtos se movam para a próxima linha se não houver espaço suficiente */
+    justify-content: space-between; /* Distribui os produtos de forma uniforme */
 }
 .container1 {
     position: relative ;
@@ -207,3 +208,4 @@ header nav a {
 .scroll-btn.right {
     right: 10px;
 }
+

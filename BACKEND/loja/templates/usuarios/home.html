@@ -51,21 +51,24 @@
                 <h2>PRODUTOS EM DESTAQUE</h2>
            
                 <div class="productimg">
-                    <div class="produtonovo">
+                 
                         {% for produto in produtos %}
+                        <div class="produtonovo">
                         {% for imagem in produto.imagemprodutos_set.all %}
+                     
                         <img src="{{ imagem.imagem.url }}" alt="{{ produto.nome_produtos }}">
-                          
-                        {% endfor %} 
                         <h2>{{ produto.nome_produtos }}</h2>
                         <p>{{ produto.descricao_produto }}</p>
                         <p>preço: {{ produto.preco_produtos }}</p>
-                        <p> categoria: {{ produto.categoria_produtos }} </p>                    
+                        <p> categoria: {{ produto.categoria_produtos }} </p>
+                    
+                    </div>
+                        {% endfor %} 
+                                            
                     {% endfor %}
                      
                         </div>
-                    </div>
-
+               
             <button class="scroll-btn right" onclick="scrollContainer(1, '.product-wrapper')">&#9654;</button>
         </div>
     </div>    
