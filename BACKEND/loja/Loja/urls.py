@@ -11,8 +11,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', produto_views.lista_produto, name='home'),
     # rota para as informaçoes do usuario
-    path('informacao/', views.usuarios, name='listagem_usuarios'),
-
+   
+    path('add/', views.add, name='dadoAdd'),
     path('usuarios/', include('Loja_app.urls')),
     path('auth/', include("Loja_app.urls")),
     path('logout/', auth_views.LogoutView.as_view(template_name='usuarios/logout.html'), name='logout'),

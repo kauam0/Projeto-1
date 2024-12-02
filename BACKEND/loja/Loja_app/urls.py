@@ -12,9 +12,11 @@ urlpatterns = [
 
     path('tela_de_usuario/' , views.tela_de_usuario, name='tela_de_usuario'),
 
-    path('registro/', views.registro, name='listagem_usuarios')
+    path('registro/', views.registro, name='listagem_usuarios'),
     
+   
 
+    path('tela_edit/', views.tela_edit, name='tela_edit' )
     ]
 
 

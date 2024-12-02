@@ -40,7 +40,7 @@ header nav a {
     margin-top: -10px;
 }
 
-.searchContainer {
+/* .searchContainer {
     display: flex;
     align-items: center;
     height: 30px;
@@ -50,9 +50,9 @@ header nav a {
     border: 2px solid white;
     border-radius: 25px;
     margin-right: 30px;
-}
+} */
 
-.pesquiseBar {
+/* .pesquiseBar {
     width: 100%;
     transition: width 0.4s ease-in-out;
     background-color: transparent;
@@ -69,7 +69,7 @@ header nav a {
 .searchContainer span {
     color: aliceblue;
     font-size: 20px;
-}
+} */
 
 body{
     background-color: rgb(255, 247, 238);
@@ -171,20 +171,57 @@ body .container{
     
 }
 .btn-cancel{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    border-radius: 20px;
+    display: flex;
+    border-radius: 18px;
+    width: 100px;
     height: 40px;
-    width: 90px;
-    
+    text-decoration: transparent;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    color: black;
+    transition: 0.2s ease-in-out all;
+    cursor: pointer;
 }
 .btn-save{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 14px;
-    border-radius: 20px;
+    display: flex;
+    border-radius: 18px;
+    width: 100px;
     height: 40px;
-    width: 90px;
-    margin-right: 20px;
+    text-decoration: transparent;
+    align-items: center;
+    justify-content: center;
+    margin-right: 45%;
+    color: black;
+    transition: 0.2s ease-in-out all;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+.btn-save a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.btn-save:hover{
+    background-color: rgb(255, 255, 255);
+    color: aliceblue;
+
+}
+button{
+    text-decoration: none;
+    border: transparent;
+    font: 300;
+    width: 220px;
+    height: 45px;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+}
+button:hover{
+    color: aliceblue;
 }
 .account-edit{
     display: flex;

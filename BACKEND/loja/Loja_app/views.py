@@ -12,6 +12,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from .forms import EmailAuthenticationForm
+from django.contrib.auth import logout
 
 def home(request):
     return render(request, 'usuarios/home.html')
@@ -49,7 +50,7 @@ def registro (request):
         
         
         user = User.objects.filter(email=email).first()
-        user.set_password(senha)
+        
         if user:
             return HttpResponse('esse email ja existe')
         user = User.objects.create_user(username=nome, email=email, password=senha)
@@ -68,18 +69,25 @@ def carrinho(request):
 @login_required(login_url="/auth/login/")
 def tela_de_usuario(request):
     if request.user.is_authenticated:
+        return render(request, 'usuarios/tela/perfil.html')
+    return HttpResponse('nao autenticado')
+
+@login_required(login_url="/auth/login/")
+def tela_edit(request):
+    if request.user.is_authenticated:
         return render(request, 'usuarios/tela/index.html')
     return HttpResponse('nao autenticado')
 
- 
-def usuarios(request):
+
+
+
+
+
+def add(request):
     #salvar
     novo_usuario = Usuario()
-    novo_usuario.nome = request.POST.get('nome')
     novo_usuario.nascimento = request.POST.get('nascimento')
     novo_usuario.telefone = request.POST.get('telefone')
-    novo_usuario.email = request.POST.get('email')
-    novo_usuario.senha = request.POST.get('senha')
     novo_usuario.cep = request.POST.get('cep')
     novo_usuario.bairro = request.POST.get('bairro')
     novo_usuario.numero_casa = request.POST.get('numero_casa')

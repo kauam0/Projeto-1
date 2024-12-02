@@ -5,18 +5,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de Usuario</title>
-    <link rel="stylesheet"  href="{% static 'css/tela/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tela/perfil.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <title>tela de usuario</title>
 </head>
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="home.html" class="logo">
+                <img src="{% static 'imgs/20240625_172008808(1).png' %}" alt="logo">
+            </a>
+            <a href="#" class="cep">CEP</a>
+            <a href="#" class="promocoes">Promoções</a>
+            <a href="#" class="categorias">Categorias</a>
+
+            <a href="{% url 'loginn' %}" class="login" id="login">Login</a>
+            <a href="{% url 'tela_de_usuario' %}" class="perfil">Perfil</a>
+            <div class="carrinho">
+                <a href="{% url 'carrinho' %}">
+                    <span class="material-symbols-outlined">shopping_cart</span>
+                </a>
+            </div>
+        </nav>
+    </header>
     <div class="container">
         <div class="profile">
               <div class="profile-header">
                 <img src="user-image.jfif" alt="profile" class="profile-img">
                 <div class="profile-text-container">
-                    <div class="h1"><h1 class="profile-title">{{ request.user.username }}</h1></div>
+                    <div class="h1"><h1 class="profile-title">{{ user.username }}</h1></div>
                     
-                    <p class="profile-email">{{ request.email }}</p>
+                    <p class="profile-email">{{ user.email }}</p>
                 </div>
               </div>
               <div class="menu">
@@ -27,77 +46,69 @@
                     <i class="fa-solid fa-gear"></i>
                     Settings
                 <a href="#" class="menu-link">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    Logout</a>
                     
+                    {% if request.user.is_authenticated %}
+                    <form action="{% url 'logout' %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+                    </form>
+                {% endif %}</a>
+
+
+
               </div>
         </div>
         <form class="account">
             <div class="account-header">
-                <h1 class="account-title"> Configurações</h1>
                 <div class="btn-container"> </div>
-                <button class="btn-cancel"> Cancel</button>
-                <button class="btn-save"> Save</button>
+                <button class="btn-save"><a href="{% url 'tela_edit' %}">Editar</a></button>
             </div>
 
             <div class="account-edit">
                 <div class="input-container">
-                    <label>Nome Completo</label>
-                    <input type="text" placeholder="Nome Completo">
+                    <span>Nome Completo</span>
                 </div>
                 <div class="input-container">
-                    <label>Nascimento</label>
-                    <input type="date" placeholder="Data de Nascimento">
+                    <span>Nascimento</span>
+
                 </div>
             </div>
 
             <div class="account-edit">
                 <div class="input-container">
-                    <label>Telefone</label>
-                    <input type="tel" placeholder="Telefone">
+                    <span>Telefone</span>
+
                 </div>
             </div>
             <div class="account-edit">
                 <div class="input-container">
-                <label>Endereço</label>
-                <input type="text" id="address" placeholder="insira seu endereço" class="input">
-                
+                    <span>Endereço</span>
                 </div>
             
             <div class="account-edit">
         <div class="input-container">
-            <label>Bairro</label>
-            <input type="text" id="bairro" placeholder="insira seu bairro" class="input">
+            <span>Bairro</span>
+
         </div>
     </div>
         </div>
         <div class="account-edit">
         <div class="input-container">
-            <label>Cidade</label>
-            <input type="text" id="cidade" placeholder="insira sua cidade" class="input">
+            <span>Cidade</span>
+
         </div>
     
     <div class="account-edit">
         <div class="input-container">
-            <label>Nº e Complemento</label>
-            <input type="" placeholder="numero e complemento">
+            <span>N° e Complemento</span>
+
         </div>
-    </div></div>
-    <div class="account-edit">
-        <div class="input-container">
-    <label for="">Email</label>
-    <input type="email" placeholder="insira seu email">
+    </div>
 </div>
-</div>
-<div class="account-edit">
-<div class="input-container">
-    <label for="">Senha</label>
-    <input type="password" placeholder="insira sua senha">
-        </div>
             </div>
         </div>
         
         </form>
-    </div>  
+    </div>
 </body>
 </html>
