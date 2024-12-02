@@ -41,6 +41,7 @@
     </div>
     </div>
 <div class="maincontainer">
+   
     <div class="containerdeproduto">
     <div class="container1">
         <!-- Produtos em Destaque -->
@@ -48,55 +49,27 @@
             <button class="scroll-btn left" onclick="scrollContainer(-1, '.product-wrapper')">&#9664;</button>
             <div class="containerproduct">
                 <h2>PRODUTOS EM DESTAQUE</h2>
-                {% for produto in produtos %}
+           
                 <div class="productimg">
                     <div class="produtonovo">
+                        {% for produto in produtos %}
                         {% for imagem in produto.imagemprodutos_set.all %}
-                        <img src="{{ imagem.imagem.url }}" alt="{{ produto.nome_produtos }}"> 
+                        <img src="{{ imagem.imagem.url }}" alt="{{ produto.nome_produtos }}">
+                          
                         {% endfor %} 
                         <h2>{{ produto.nome_produtos }}</h2>
                         <p>{{ produto.descricao_produto }}</p>
                         <p>preço: {{ produto.preco_produtos }}</p>
-                        <p> categoria: {{ produto.categoria_produtos }} </p>
-                
-                        
-                    
+                        <p> categoria: {{ produto.categoria_produtos }} </p>                    
                     {% endfor %}
-                        <div class="textop1">
-                            <a href="Asics metarise.html">Asics Metarise</a>
+                     
                         </div>
                     </div>
-                    <div class="produtonovo"> 
-                        <img src="{%static 'C:\Users\HenriqueJoseAlvesDeL\Documents\tcc\Projeto-1\BACKEND\loja\static\imgs\lebronha.webp' %}" alt="Lebronha">
-                        <div class="textop1">
-                            <a href="lebronha.html">Lebronha</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{% static 'imgs/precision 6.avif' %}" alt="Precision VI">
-                        <div class="textop1">
-                            <a href="precision 6.avif">Precision VI</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{%static 'imgs/barata.webp' %}" alt="Barata de brinquedo">
-                        <div class="textop1">
-                            <a href="barata.webp">Barata de brinquedo</a>
-                        </div>
-                    </div>
-                    <div class="produtonovo">
-                        <img src="{%static 'imgs/0823740003-A.webp' %}" alt="Saguadin">
-                        <div class="textop1">
-                            <a href="#">Giannis Imortality 3</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <button class="scroll-btn right" onclick="scrollContainer(1, '.product-wrapper')">&#9654;</button>
         </div>
     </div>    
     <!---Texto sobre o site-->
-
     <!-- Produtos em Promoção -->
     <div class="container2">
         <div class="product-wrapper">
