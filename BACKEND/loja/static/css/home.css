@@ -6,6 +6,11 @@
     box-sizing: border-box;
     padding: 0;
 }
+@media (max-width: 768px) {
+    .slogandoacao {
+        height: 300px; /* Ajusta a altura em telas menores */
+    }
+}
 
 body {
     font-family: "Ubuntu", sans-serif;
@@ -136,6 +141,30 @@ header nav a {
     border: solid black;
     border-radius: 30px; /* Ajuste o valor para arredondar mais ou menos */
 }
+.slogandoacao{
+        margin-left: 65px;
+        color: black;
+        width: 100%;
+        max-width: 1500px;
+        height: 400px; /* Tamanho fixo, pode ser alterado */
+        background-image: url('static/imgs/ONU-ICM.png');
+        border: solid black;
+        border-radius: 30px;
+        overflow: visible;
+        background-size: cover;
+        gap: 10px;
+        margin-left: 6%;
+        margin-bottom: 5px;
+}
+.slogandoacao img{
+    align-items: center;
+}
+.slogandoacao h2 {
+    bottom: 20px;
+    left: 65px;
+    font-size: 28px;
+    color: yellow;
+}
 .divtexto h2 {
     font-size: 24px; /* Ajuste do tamanho do texto */
     line-height: 1.5;
@@ -166,6 +195,16 @@ header nav a {
     gap: 20px; /* Espaçamento entre os itens */
     border-radius: 5%;
 }
+.containerproduct2 {
+    display: absolute;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os itens */
+    border-radius: 5%;
+    width: 1600px;
+    overflow: visible;
+}
+
 .ongscontainer {
     display: flex;
     flex-direction: row;
